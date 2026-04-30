@@ -16,23 +16,27 @@ const PROJECT_DATA: Record<string, any> = {
     role: 'UX/UI Designer',
     industry: 'E-commerce',
     duration: '2 months',
-    image: 'https://i.postimg.cc/r0hKFkcd/maisndiasndas.png',
+    image: 'https://i.postimg.cc/ry1TdVCR/mockup1v234r2w3.png',
     stages: [
       {
         title: 'Stage 1. Product Understanding',
+        subtitle: 'CONTEXTUAL RESEARCH',
         content: 'Started by analyzing the campaign management experience within the platform. The goal was to simplify how users create, manage, and track marketing campaigns in one place. Identified key friction points around navigation, campaign setup, and performance visibility.',
-        image: 'https://i.postimg.cc/N56gftgh/czxzvcx.png'
+        image: 'https://i.postimg.cc/0P5m8bC7/czxzvcx.png?dl=1'
       },
       {
         title: 'Stage 2. Design Strategy',
+        subtitle: 'STRATEGIC FOUNDATION',
         content: 'Defined a simpler and more structured flow for campaign creation and management. Focused on: Clear hierarchy of information, easier access to key metrics, supporting both one-time and recurring campaigns. The goal was to reduce complexity while improving usability and clarity.'
       },
       {
         title: 'Stage 3. Interface & Experience Design',
+        subtitle: 'VISUAL EXECUTION',
         content: 'Designed a centralized view where users can track performance through metrics like revenue, orders, click rate, and delivery status. Simplified the process of setting up campaigns, making it faster and more intuitive. Created a clean and functional interface that highlights important data and improves overall readability.'
       },
       {
         title: 'Stage 4. Outcome',
+        subtitle: 'FINAL DELIVERY',
         content: '"The final experience makes campaign management feel simpler, faster, and more transparent. Store owners can now create, monitor, and optimize their campaigns with confidence all from one place."',
         italic: true
       }
@@ -55,14 +59,17 @@ const PROJECT_DATA: Record<string, any> = {
     stages: [
       {
         title: 'Stage 1. Problem Identification',
+        subtitle: 'USER FRICTION',
         content: 'Users reported difficulty in finding key product specifications and pricing options. The layout was cluttered and lacked clear call-to-actions.'
       },
       {
         title: 'Stage 2. Information Architecture',
+        subtitle: 'DATA HIERARCHY',
         content: 'Restructured the product information hierarchy to prioritize high-value data. Grouped related features and simplified the selection process for variable products.'
       },
       {
         title: 'Stage 3. Visual Overhaul',
+        subtitle: 'CLEAN INTERFACE',
         content: 'Implemented a clean, grid-based layout that maintains consistency with the brand identity while improving readability across devices.'
       }
     ]
@@ -86,14 +93,17 @@ const PROJECT_DATA: Record<string, any> = {
     stages: [
       {
         title: 'Stage 1. Brand Audit',
+        subtitle: 'CURRENT STATE',
         content: 'Conducted a deep dive into Kore\'s core values and market positioning. Identified the need for a more professional yet approachable visual language.'
       },
       {
         title: 'Stage 2. Concept Development',
+        subtitle: 'CREATIVE EXPLORATION',
         content: 'Explored multiple directions for the logo, focusing on themes of connectivity, stability, and growth in the private capital market.'
       },
       {
         title: 'Stage 3. Final Identity',
+        subtitle: 'BRAND DELIVERY',
         content: 'Delivered a comprehensive brand package including a new logo, color palette, typography, and visual assets for digital and physical touchpoints.'
       }
     ]
@@ -109,14 +119,17 @@ const PROJECT_DATA: Record<string, any> = {
     stages: [
       {
         title: 'Stage 1. Content Strategy',
+        subtitle: 'USER JOURNEY',
         content: 'Mapped out the user journey to ensure clear communication of Kore\'s complex service offerings to potential investors and clients.'
       },
       {
         title: 'Stage 2. Visual Language',
+        subtitle: 'DIGITAL AESTHETICS',
         content: 'Integrated custom illustrations and subtle motion graphics to bring the brand to life and guide users through the financial narratives.'
       },
       {
         title: 'Stage 3. Responsive Web Design',
+        subtitle: 'PLATFORM AGNOSTIC',
         content: 'Developed a fully responsive website that maintains its visual integrity and performance across all screen sizes.'
       }
     ]
@@ -195,18 +208,18 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
           initial={{ scale: 0.95, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
-          className="aspect-video w-full rounded-[4px] overflow-hidden bg-worn-carbon hextech-border group"
+          className="w-full rounded-[4px] overflow-hidden bg-worn-carbon hextech-border group"
         >
           <img 
             src={project.image} 
             alt={project.title} 
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            className="w-full h-auto transition-transform duration-700 group-hover:scale-102"
           />
         </motion.div>
       </section>
 
       {/* Stages Section */}
-      <section className="max-w-3xl mx-auto px-6 space-y-32 mb-48 text-aether-white/80">
+      <section className="max-w-7xl mx-auto px-6 space-y-32 mb-48 text-aether-white/80">
         {/* Gallery Section */}
         {project.gallery && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-32">
@@ -216,44 +229,63 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
-                className="aspect-video rounded-[4px] overflow-hidden bg-worn-carbon hextech-border"
+                className="rounded-[4px] overflow-hidden bg-worn-carbon hextech-border"
               >
                 <img 
                   src={img} 
                   alt={`${project.title} Gallery ${index + 1}`} 
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto"
                 />
               </motion.div>
             ))}
           </div>
         )}
 
-        {project.stages.map((stage: any, i: number) => (
-          <motion.div 
-            key={i}
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
-            <h2 className="text-2xl md:text-3xl font-display text-hextech-green">{stage.title}</h2>
-            <div className={`space-y-6 text-lg font-light leading-relaxed ${stage.italic ? 'italic' : ''}`}>
-              <p>{stage.content}</p>
-            </div>
-            {stage.image && (
-              <div className="relative left-1/2 -translate-x-1/2 w-[150%] max-w-[100vw] sm:w-[130%] md:w-[124%]">
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon mt-12"
-                >
-                  <img src={stage.image} alt={stage.title} className="w-full h-auto" />
-                </motion.div>
+        {project.stages.map((stage: any, i: number) => {
+          const stageNumber = (i + 1).toString().padStart(2, '0');
+          // Try to extract title if it starts with "Stage X. "
+          const displayTitle = stage.title.replace(/^Stage \d+\. /, '').toUpperCase();
+          const subtitle = stage.subtitle || "PHASE ANALYSIS";
+
+          return (
+            <motion.div 
+              key={i}
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              className="space-y-12"
+            >
+              <div className="space-y-4">
+                <span className="text-[10px] font-mono text-hextech-green/40 tracking-[4px]">{stageNumber}</span>
+                <h2 className="text-4xl md:text-6xl font-display text-aether-white uppercase tracking-tighter">{displayTitle}</h2>
               </div>
-            )}
-          </motion.div>
-        ))}
+              
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                <div className="md:col-span-4 translate-y-1">
+                  <span className="text-[10px] font-sans font-bold uppercase tracking-[6px] text-hextech-green/60">
+                    {subtitle}
+                  </span>
+                </div>
+                <div className={`md:col-span-8 space-y-6 text-lg font-light leading-relaxed text-aether-white/80 ${stage.italic ? 'italic' : ''}`}>
+                  <p>{stage.content}</p>
+                </div>
+              </div>
+
+              {stage.image && (
+                <div className="w-full mt-16">
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon shadow-2xl shadow-black/50"
+                  >
+                    <img src={stage.image} alt={stage.title} className="w-full h-auto" />
+                  </motion.div>
+                </div>
+              )}
+            </motion.div>
+          );
+        })}
 
         {/* Static Visual Context Placeholders (same layout as original) */}
         {projectId === 'Campaign Builder for Blaze Ecom' && (
