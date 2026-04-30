@@ -16,7 +16,7 @@ const PROJECT_DATA: Record<string, any> = {
     role: 'UX/UI Designer',
     industry: 'E-commerce',
     duration: '2 months',
-    image: '/regenerated_image_1777404142590.png',
+    image: 'https://i.postimg.cc/r0hKFkcd/maisndiasndas.png',
     stages: [
       {
         title: 'Stage 1. Product Understanding',
@@ -241,14 +241,16 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
               <p>{stage.content}</p>
             </div>
             {stage.image && (
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon mt-12"
-              >
-                <img src={stage.image} alt={stage.title} className="w-full h-auto" />
-              </motion.div>
+              <div className="relative left-1/2 -translate-x-1/2 w-[150%] max-w-[100vw] sm:w-[130%] md:w-[124%]">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon mt-12"
+                >
+                  <img src={stage.image} alt={stage.title} className="w-full h-auto" />
+                </motion.div>
+              </div>
             )}
           </motion.div>
         ))}
