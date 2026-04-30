@@ -26,7 +26,7 @@ export default function App() {
   return (
     <div className="min-h-screen font-sans selection:bg-aura-green selection:text-aura-black">
       <Navbar onHomeClick={handleBack} />
-      <main>
+      <main className="max-w-[1720px] mx-auto px-6">
         {activeProject ? (
           <ProjectDetail 
             projectId={activeProject} 
@@ -36,11 +36,12 @@ export default function App() {
         ) : (
           <>
             <Hero />
+            <div className="border-t border-hextech-green/10 my-24" />
             <Projects onProjectClick={handleProjectClick} />
-            <Footer />
           </>
         )}
       </main>
+      <Footer />
     </div>
   );
 }

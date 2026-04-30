@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import { ArrowLeft } from 'lucide-react';
-import Footer from './Footer';
 
 interface ProjectDetailProps {
   projectId: string;
@@ -153,7 +152,7 @@ const PROJECT_DATA: Record<string, any> = {
     role: 'UI/UX Designer / Visual Designer',
     industry: 'Fintech',
     duration: '6 months',
-    image: 'https://i.postimg.cc/YSRK7WjQ/2.gif',
+    image: 'https://i.postimg.cc/rsvRT9JX/2.gif',
     gallery: [
       'https://i.postimg.cc/3xjzjvXX/6.jpg',
       'https://i.postimg.cc/ht8N8dL0/7.jpg',
@@ -202,7 +201,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
   return (
     <div className="min-h-screen bg-forge-void text-aether-white pt-32">
       {/* Back Button */}
-      <div className="px-6 mb-16">
+      <div className="mb-16">
         <button 
           onClick={onBack}
           className="group flex items-center gap-3 text-sm font-display uppercase tracking-[4px] text-hextech-green hover:opacity-80 transition-opacity"
@@ -213,11 +212,11 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
       </div>
 
       {/* Header */}
-      <section className="px-6 mb-24">
+      <section className="mb-20 text-center">
         <motion.h1 
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className="text-4xl md:text-7xl font-display mb-12 max-w-4xl"
+          className="text-4xl md:text-7xl font-display mb-8 md:max-w-[90%] mx-auto"
         >
           {project.title.split(project.subtitle).map((part: string, i: number) => (
             <span key={i}>
@@ -230,14 +229,14 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.1 }}
-          className="text-lg md:text-xl text-aether-white/60 max-w-3xl font-light leading-relaxed"
+          className="text-lg md:text-xl text-aether-white/60 md:max-w-[90%] mx-auto font-light leading-relaxed"
         >
           {project.description}
         </motion.p>
       </section>
 
       {/* Info Grid */}
-      <section className="px-6 mb-32">
+      <section className="mb-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             { label: 'Role', value: project.role },
@@ -263,7 +262,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
       </section>
 
       {/* Hero Image */}
-      <section className="px-6 mb-32">
+      <section className="mb-20">
         <motion.div 
           initial={{ scale: 0.95, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
@@ -279,10 +278,10 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
       </section>
 
       {/* Stages Section */}
-      <section className="px-6 space-y-32 mb-48 text-aether-white/80">
+      <section className="space-y-24 mb-32 text-aether-white/80">
         {/* Gallery Section */}
         {project.gallery && (
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-8 my-32">
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-8 my-20">
             {project.gallery.map((img: string, index: number) => {
               // Custom pattern for Kore - Website: 2 per row, then 3 per row
               // Row 1 (index 0,1): 2 items -> col-span-3
@@ -337,25 +336,25 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
               viewport={{ once: true }}
               className="space-y-12"
             >
-              <div className="space-y-4">
+              <div className="space-y-4 text-center">
                 <span className="text-[10px] font-mono text-hextech-green/40 tracking-[4px]">{stageLabel}</span>
-                <h2 className="text-4xl md:text-6xl font-display text-aether-white uppercase tracking-tighter">{displayTitle}</h2>
+                <h2 className="text-4xl md:text-6xl font-display text-aether-white uppercase tracking-tighter max-w-5xl mx-auto">{displayTitle}</h2>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-                <div className={`md:col-span-12 space-y-6 text-lg font-light leading-relaxed text-aether-white/80 whitespace-pre-line`}>
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start text-center">
+                <div className={`md:col-span-12 space-y-6 text-lg font-light leading-relaxed text-aether-white/80 whitespace-pre-line max-w-5xl mx-auto ${i === 4 ? 'text-left bg-worn-carbon/30 p-4 rounded-[4px] border border-hextech-green/20' : ''}`}>
                   {stage.content && <p>{stage.content}</p>}
                   
                   {stage.sections && (
-                    <div className="space-y-12 bg-worn-carbon/30 p-8 md:p-12 rounded-[4px] border border-hextech-green/10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
                       {stage.sections.map((section: any, idx: number) => (
-                        <div key={idx} className="space-y-8">
+                        <div key={idx} className="space-y-8 bg-worn-carbon/30 p-8 md:p-12 rounded-[4px] border border-hextech-green/10 h-full">
                           <h3 className="text-2xl font-display text-hextech-green uppercase tracking-widest">{section.title}</h3>
                           <div className="space-y-6">
                             {section.items.map((item: any, i: number) => (
                               <div key={i} className="space-y-1">
-                                <div className="font-display text-aether-white text-lg">{item.label}</div>
-                                <div className="text-aether-white/50 text-base font-light">{item.text}</div>
+                                <div className="font-display text-aether-white text-lg leading-tight">{item.label}</div>
+                                <div className="text-aether-white/50 text-base font-light leading-relaxed">{item.text}</div>
                               </div>
                             ))}
                           </div>
@@ -478,11 +477,14 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
 
       </section>
 
+      {/* Divider */}
+      <div className="w-1/3 mx-auto h-[1px] bg-hextech-green/40 mt-32" />
+
       {/* Other Projects Section */}
-      <section className="bg-worn-carbon/30 border-y hextech-border py-32 px-6">
-        <div className="px-6">
-          <h2 className="text-3xl font-display mb-16">Other <span className="text-hextech-green">projects</span></h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <section className="pb-32 pt-16">
+        <div className="text-center">
+          <h2 className="text-3xl font-display mb-16 max-w-5xl mx-auto">Other <span className="text-hextech-green">projects</span></h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
              {Object.values(PROJECT_DATA)
                .filter(p => p.title !== projectId)
                .slice(0, 2)
@@ -496,14 +498,12 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                     <img src={p.image} alt={p.title} className="w-full h-full object-cover opacity-60 transition-all group-hover:opacity-100 group-hover:scale-105" />
                   </div>
                   <h3 className="text-xl font-display mb-2 group-hover:text-hextech-green transition-colors">{p.title}</h3>
-                  <p className="text-aether-white/40 font-light">{p.description}</p>
+                  <p className="text-aether-white/40 font-light max-w-3xl">{p.description}</p>
                 </div>
              ))}
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

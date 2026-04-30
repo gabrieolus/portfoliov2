@@ -16,8 +16,8 @@ const projects = [
   {
     title: 'Kore Rebranding',
     description: 'This project showcases the rebranding and logo redesign for Kore, a Canadian fintech offering an all-in-one platform for the private capital market.',
-    image: 'https://i.postimg.cc/g2bj1zyT/1.jpg',
-    category: 'Branding'
+    image: 'https://i.postimg.cc/rsvRT9JX/2.gif',
+    category: 'UI/UX Design / Branding'
   },
   {
     title: 'Kore - Website',
@@ -33,13 +33,13 @@ interface ProjectsProps {
 
 export default function Projects({ onProjectClick }: ProjectsProps) {
   return (
-    <section id="projects" className="px-6 pt-8 pb-32">
+    <section id="projects" className="pt-4 pb-24">
       <div className="mb-24">
         <motion.h2 
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-6xl font-display mb-10"
+          className="text-4xl md:text-6xl font-display mb-10 max-w-5xl"
         >
           Selected <span className="text-hextech-green">Projects</span>
         </motion.h2>
@@ -48,7 +48,7 @@ export default function Projects({ onProjectClick }: ProjectsProps) {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-aether-white/40 text-lg md:text-xl max-w-xl font-light"
+          className="text-aether-white/40 text-lg md:text-xl max-w-5xl font-light"
         >
           Explore my selected projects, showcasing my dedication to innovative and heartfelt design.
         </motion.p>
@@ -72,14 +72,14 @@ export default function Projects({ onProjectClick }: ProjectsProps) {
                 className="w-full h-full object-cover opacity-60 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
               />
             </div>
-            <div className="space-y-6">
+            <div className="space-y-6 md:max-w-[90%]">
               <div className="uppercase tracking-[4px] text-[10px] font-bold text-hextech-green/60">
                 {project.category}
               </div>
               <h3 className="text-xl md:text-2xl font-display font-normal group-hover:text-hextech-green transition-colors">
                 {project.title}
               </h3>
-              <p className="text-aether-white/50 text-base leading-relaxed font-light">
+              <p className="text-aether-white/50 text-base leading-relaxed font-light max-w-5xl">
                 {project.description}
               </p>
             </div>
