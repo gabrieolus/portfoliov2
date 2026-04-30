@@ -3,7 +3,7 @@ import { BehanceIcon, LinkedInIcon } from './BrandIcons';
 
 export default function Hero() {
   return (
-    <section id="home" className="pt-48 pb-8 px-6 max-w-7xl mx-auto">
+    <section id="home" className="pt-48 pb-8 px-6">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         <div className="lg:col-span-10">
           <motion.h1 

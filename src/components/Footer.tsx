@@ -5,7 +5,7 @@ export default function Footer() {
   
   return (
     <footer className="px-6 py-20 border-t hextech-border">
-      <div className="max-w-7xl mx-auto flex justify-center">
+      <div className="flex justify-center">
         <div className="flex gap-4">
           {[
             <a href="https://www.linkedin.com/in/gabrieolus/" target="_blank" rel="noopener noreferrer"><LinkedInIcon width={17} height={17} /></a>,
@@ -18,7 +18,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center mt-20 text-[9px] text-aether-white/20 uppercase tracking-[4px] font-bold">
-        Copyright {currentYear} by Gabriel Fiore • Digital Experience Architect
+        Copyright {currentYear} by Gabriel Fiore • Product Designer
       </div>
     </footer>
   );

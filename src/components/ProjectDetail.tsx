@@ -153,14 +153,14 @@ const PROJECT_DATA: Record<string, any> = {
     role: 'Visual Designer',
     industry: 'Fintech',
     duration: '3 months',
-    image: 'https://i.postimg.cc/g2bj1zyT/1.jpg',
+    image: 'https://i.postimg.cc/YSRK7WjQ/2.gif',
     gallery: [
-      '/kore_rebranding.png',
-      '/regenerated_image_1777404148000.png',
-      '/regenerated_image_1777404141454.png',
-      '/regenerated_image_1777411522456.png',
-      '/regenerated_image_1777545166797.png',
-      '/regenerated_image_1777545172023.png'
+      'https://i.postimg.cc/3xjzjvXX/6.jpg',
+      'https://i.postimg.cc/ht8N8dL0/7.jpg',
+      'https://i.postimg.cc/zGw4wgCj/9.jpg',
+      'https://i.postimg.cc/tg4yY5Kk/11.gif',
+      'https://i.postimg.cc/432GtcZN/13.gif',
+      'https://i.postimg.cc/G2BCjphb/14.gif'
     ],
     stages: [
       {
@@ -214,7 +214,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
   return (
     <div className="min-h-screen bg-forge-void text-aether-white pt-32">
       {/* Back Button */}
-      <div className="max-w-7xl mx-auto px-6 mb-16">
+      <div className="px-6 mb-16">
         <button 
           onClick={onBack}
           className="group flex items-center gap-3 text-sm font-display uppercase tracking-[4px] text-hextech-green hover:opacity-80 transition-opacity"
@@ -225,7 +225,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
       </div>
 
       {/* Header */}
-      <section className="max-w-7xl mx-auto px-6 mb-24">
+      <section className="px-6 mb-24">
         <motion.h1 
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -249,7 +249,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
       </section>
 
       {/* Info Grid */}
-      <section className="max-w-7xl mx-auto px-6 mb-32">
+      <section className="px-6 mb-32">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             { label: 'Role', value: project.role },
@@ -275,7 +275,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
       </section>
 
       {/* Hero Image */}
-      <section className="max-w-7xl mx-auto px-6 mb-32">
+      <section className="px-6 mb-32">
         <motion.div 
           initial={{ scale: 0.95, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
@@ -291,10 +291,10 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
       </section>
 
       {/* Stages Section */}
-      <section className="max-w-7xl mx-auto px-6 space-y-32 mb-48 text-aether-white/80">
+      <section className="px-6 space-y-32 mb-48 text-aether-white/80">
         {/* Gallery Section */}
         {project.gallery && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-32">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-32">
             {project.gallery.map((img: string, index: number) => (
               <motion.div
                 key={index}
@@ -469,7 +469,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
 
       {/* Other Projects Section */}
       <section className="bg-worn-carbon/30 border-y hextech-border py-32 px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="px-6">
           <h2 className="text-3xl font-display mb-16">Other <span className="text-hextech-green">projects</span></h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
              {Object.values(PROJECT_DATA)

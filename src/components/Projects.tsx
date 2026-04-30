@@ -33,7 +33,7 @@ interface ProjectsProps {
 
 export default function Projects({ onProjectClick }: ProjectsProps) {
   return (
-    <section id="projects" className="px-6 pt-8 pb-32 max-w-7xl mx-auto">
+    <section id="projects" className="px-6 pt-8 pb-32">
       <div className="mb-24">
         <motion.h2 
           initial={{ y: 20, opacity: 0 }}
