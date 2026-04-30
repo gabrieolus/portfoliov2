@@ -42,16 +42,16 @@ const PROJECT_DATA: Record<string, any> = {
         content: '• Reducing unnecessary steps\n• Making the flow adaptable instead of linear\n• Keeping key decisions visible throughout the process',
         image: 'https://i.postimg.cc/NgcL4kxd/web-mockup-V1-frontv2123.jpg?dl=1',
         imagesGrid: [
-          'https://i.postimg.cc/05b4r3bb/Recurring-Campaign-Detail-Edit-Performance-v2123412323.jpg',
-          'https://i.postimg.cc/KcRW4VR4/Recurring-Campaign-Detail-Edit-Performance-v2123412332.jpg',
-          'https://i.postimg.cc/KcRW4VR4/Recurring-Campaign-Detail-Edit-Performance-v2123412332.jpg'
+          'https://i.postimg.cc/v8JPPttN/1.jpg',
+          'https://i.postimg.cc/HWqSS9tH/2.jpg',
+          'https://i.postimg.cc/8kMdCQh7/3.jpg'
         ]
       },
       {
         title: 'Outcome',
         subtitle: 'FINAL RESULTS',
         content: 'The result is a flexible campaign builder designed to balance structure and freedom — allowing users to move faster without losing control.',
-        image: 'https://i.postimg.cc/rwQG1VPP/websiteimage-02.png'
+        image: 'https://i.postimg.cc/KjGYFMPD/outcome.png'
       }
     ]
   },
@@ -150,9 +150,9 @@ const PROJECT_DATA: Record<string, any> = {
     title: 'Kore Rebranding',
     subtitle: 'Fintech Identity',
     description: 'This project showcases the rebranding and logo redesign for Kore, a Canadian fintech offering an all-in-one platform for the private capital market.',
-    role: 'Visual Designer',
+    role: 'UI/UX Designer / Visual Designer',
     industry: 'Fintech',
-    duration: '3 months',
+    duration: '6 months',
     image: 'https://i.postimg.cc/YSRK7WjQ/2.gif',
     gallery: [
       'https://i.postimg.cc/3xjzjvXX/6.jpg',
@@ -164,16 +164,6 @@ const PROJECT_DATA: Record<string, any> = {
     ],
     stages: [
       {
-        title: 'Stage 1. Brand Audit',
-        subtitle: 'CURRENT STATE',
-        content: 'Conducted a deep dive into Kore\'s core values and market positioning. Identified the need for a more professional yet approachable visual language.'
-      },
-      {
-        title: 'Stage 2. Concept Development',
-        subtitle: 'CREATIVE EXPLORATION',
-        content: 'Explored multiple directions for the logo, focusing on themes of connectivity, stability, and growth in the private capital market.'
-      },
-      {
         title: 'Stage 3. Final Identity',
         subtitle: 'BRAND DELIVERY',
         content: 'Delivered a comprehensive brand package including a new logo, color palette, typography, and visual assets for digital and physical touchpoints.'
@@ -183,28 +173,26 @@ const PROJECT_DATA: Record<string, any> = {
   'Kore - Website': {
     title: 'Kore - Website',
     subtitle: 'Web Presence',
-    description: 'A comprehensive design and illustration project for Kore\'s digital presence, including motion graphics and website layout.',
-    role: 'Web Designer & Illustrator',
+    description: 'In this project, we showcase a selection of UI/UX design, illustrations, and motion graphics created for the Kore websites ecosystem. Kore is a Canadian company that provides an All-In-One platform dedicated to the private capital market. Our goal was to maintain a cohesive visual identity across all projects, adapting it strategically for each of Kore’s distinct fronts. As a bonus, we also present some elements designed for a previous company initiative page.',
+    role: 'UI/UX Designer',
     industry: 'Fintech',
     duration: '3 months',
     image: 'https://i.postimg.cc/prNyxPbX/f4ac37211275387.png',
-    stages: [
-      {
-        title: 'Stage 1. Content Strategy',
-        subtitle: 'USER JOURNEY',
-        content: 'Mapped out the user journey to ensure clear communication of Kore\'s complex service offerings to potential investors and clients.'
-      },
-      {
-        title: 'Stage 2. Visual Language',
-        subtitle: 'DIGITAL AESTHETICS',
-        content: 'Integrated custom illustrations and subtle motion graphics to bring the brand to life and guide users through the financial narratives.'
-      },
-      {
-        title: 'Stage 3. Responsive Web Design',
-        subtitle: 'PLATFORM AGNOSTIC',
-        content: 'Developed a fully responsive website that maintains its visual integrity and performance across all screen sizes.'
-      }
-    ]
+    gallery: [
+      'https://i.postimg.cc/432GtcZN/13.gif',
+      'https://i.postimg.cc/G2BCjphb/14.gif',
+      'https://i.postimg.cc/jjCx8Tsz/1.gif',
+      'https://i.postimg.cc/RhxvVnwn/10.gif',
+      'https://i.postimg.cc/s28VqLxF/11.jpg',
+      'https://i.postimg.cc/Kjhmvgt1/12.gif',
+      'https://i.postimg.cc/0N38F4Qd/2.jpg',
+      'https://i.postimg.cc/FRL94xkm/5.gif',
+      'https://i.postimg.cc/tgfXwcTz/6.jpg',
+      'https://i.postimg.cc/zfMJ6QBj/7.jpg',
+      'https://i.postimg.cc/8561SbfF/8.gif',
+      'https://i.postimg.cc/43MJq0dM/9.jpg'
+    ],
+    stages: []
   }
 };
 
@@ -294,22 +282,45 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
       <section className="px-6 space-y-32 mb-48 text-aether-white/80">
         {/* Gallery Section */}
         {project.gallery && (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-32">
-            {project.gallery.map((img: string, index: number) => (
-              <motion.div
-                key={index}
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                className="rounded-[4px] overflow-hidden bg-worn-carbon hextech-border"
-              >
-                <img 
-                  src={img} 
-                  alt={`${project.title} Gallery ${index + 1}`} 
-                  className="w-full h-auto"
-                />
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-8 my-32">
+            {project.gallery.map((img: string, index: number) => {
+              // Custom pattern for Kore - Website: 2 per row, then 3 per row
+              // Row 1 (index 0,1): 2 items -> col-span-3
+              // Row 2 (index 2,3,4): 3 items -> col-span-2
+              // Row 3 (index 5,6): 2 items -> col-span-3
+              // Row 4 (index 7,8,9): 3 items -> col-span-2
+              // Row 5 (index 10,11): 2 items -> col-span-3
+              
+              let colSpan = "md:col-span-2"; // default for 3 items
+              
+              if (projectId === 'Kore - Website') {
+                const patternIndex = index % 5;
+                if (patternIndex < 2) {
+                  colSpan = "md:col-span-3"; // 2 items row
+                } else {
+                  colSpan = "md:col-span-2"; // 3 items row
+                }
+              } else if (project.gallery.length % 3 !== 0 && project.gallery.length % 2 === 0) {
+                // FALLBACK: If not 3-divisible but 2-divisible, use 2 columns
+                colSpan = "md:col-span-3";
+              }
+
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  className={`rounded-[4px] overflow-hidden bg-worn-carbon hextech-border ${colSpan}`}
+                >
+                  <img 
+                    src={img} 
+                    alt={`${project.title} Gallery ${index + 1}`} 
+                    className="w-full h-auto"
+                  />
+                </motion.div>
+              );
+            })}
           </div>
         )}
 
