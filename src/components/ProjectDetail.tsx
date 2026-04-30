@@ -16,29 +16,42 @@ const PROJECT_DATA: Record<string, any> = {
     role: 'UX/UI Designer',
     industry: 'E-commerce',
     duration: '2 months',
-    image: 'https://i.postimg.cc/ry1TdVCR/mockup1v234r2w3.png',
+    image: 'https://i.postimg.cc/KvSm89KT/cover-campaign-builder.png',
     stages: [
       {
-        title: 'Stage 1. Product Understanding',
-        subtitle: 'CONTEXTUAL RESEARCH',
-        content: 'Started by analyzing the campaign management experience within the platform. The goal was to simplify how users create, manage, and track marketing campaigns in one place. Identified key friction points around navigation, campaign setup, and performance visibility.',
-        image: 'https://i.postimg.cc/0P5m8bC7/czxzvcx.png?dl=1'
+        title: 'Overview',
+        subtitle: 'PROJECT OVERVIEW',
+        content: 'This project focuses on the campaign management section of a cannabis e-commerce admin dashboard. The goal was to help store owners easily create and monitor marketing campaigns in one place.\n\nThe interface allows users to view campaign performance through key metrics like revenue, orders, click rate, and delivery status. It also supports both recurring and one-time campaigns, making it easy to manage promotions and marketing efforts directly from the dashboard.',
+        image: 'https://i.postimg.cc/26sHR9kL/Mac-Book-Pro-14Incv2.png'
       },
       {
-        title: 'Stage 2. Design Strategy',
-        subtitle: 'STRATEGIC FOUNDATION',
-        content: 'Defined a simpler and more structured flow for campaign creation and management. Focused on: Clear hierarchy of information, easier access to key metrics, supporting both one-time and recurring campaigns. The goal was to reduce complexity while improving usability and clarity.'
+        title: 'The challenge',
+        subtitle: 'PROBLEM STATEMENT',
+        content: 'Campaign builders tend to overload users with steps and decisions. The challenge was simplifying the process without removing control.'
       },
       {
-        title: 'Stage 3. Interface & Experience Design',
-        subtitle: 'VISUAL EXECUTION',
-        content: 'Designed a centralized view where users can track performance through metrics like revenue, orders, click rate, and delivery status. Simplified the process of setting up campaigns, making it faster and more intuitive. Created a clean and functional interface that highlights important data and improves overall readability.'
+        title: 'The idea',
+        subtitle: 'CONCEPTUAL APPROACH',
+        content: 'Instead of treating campaigns as a sequence of steps, I approached them as a modular system where users can build, adjust, and iterate more freely.',
+        image: 'https://i.postimg.cc/KjQgr4H2/userflow.png',
+        imageSize: 'small'
       },
       {
-        title: 'Stage 4. Outcome',
-        subtitle: 'FINAL DELIVERY',
-        content: '"The final experience makes campaign management feel simpler, faster, and more transparent. Store owners can now create, monitor, and optimize their campaigns with confidence all from one place."',
-        italic: true
+        title: 'Main focus',
+        subtitle: 'CORE PRIORITIES',
+        content: '• Reducing unnecessary steps\n• Making the flow adaptable instead of linear\n• Keeping key decisions visible throughout the process',
+        image: 'https://i.postimg.cc/NgcL4kxd/web-mockup-V1-frontv2123.jpg?dl=1',
+        imagesGrid: [
+          'https://i.postimg.cc/05b4r3bb/Recurring-Campaign-Detail-Edit-Performance-v2123412323.jpg',
+          'https://i.postimg.cc/KcRW4VR4/Recurring-Campaign-Detail-Edit-Performance-v2123412332.jpg',
+          'https://i.postimg.cc/KcRW4VR4/Recurring-Campaign-Detail-Edit-Performance-v2123412332.jpg'
+        ]
+      },
+      {
+        title: 'Outcome',
+        subtitle: 'FINAL RESULTS',
+        content: 'The result is a flexible campaign builder designed to balance structure and freedom — allowing users to move faster without losing control.',
+        image: 'https://i.postimg.cc/rwQG1VPP/websiteimage-02.png'
       }
     ]
   },
@@ -49,28 +62,87 @@ const PROJECT_DATA: Record<string, any> = {
     role: 'UX/UI Designer',
     industry: 'E-commerce',
     duration: '1 month',
-    image: '/regenerated_image_1777404144725.png',
-    gallery: [
-      '/regenerated_image_1777545166797.png',
-      '/regenerated_image_1777545168272.png',
-      '/regenerated_image_1777545172023.png',
-      '/regenerated_image_1777545172983.png'
-    ],
+    image: 'https://i.postimg.cc/gcgYb11L/mainpage.jpg',
     stages: [
       {
-        title: 'Stage 1. Problem Identification',
+        title: 'Where the Experience Breaks',
         subtitle: 'USER FRICTION',
-        content: 'Users reported difficulty in finding key product specifications and pricing options. The layout was cluttered and lacked clear call-to-actions.'
+        content: 'The existing product page for our cannabis e-commerce platform lacked the clarity needed for an informed purchase. Users were overwhelmed by technical jargon, struggled to identify products suited to their experience level, and faced friction when attempting to purchase in bulk.\n\nThe redesign aims to better communicate this value by simplifying how information is presented and guiding users more effectively through the product experience.'
       },
       {
-        title: 'Stage 2. Information Architecture',
-        subtitle: 'DATA HIERARCHY',
-        content: 'Restructured the product information hierarchy to prioritize high-value data. Grouped related features and simplified the selection process for variable products.'
+        title: 'Research and Insights',
+        subtitle: 'PROBLEM & GOAL',
+        sections: [
+          {
+            title: 'Problem:',
+            items: [
+              { label: 'Information Overload:', text: 'Technical data (THC/CBD/Terpenes) was difficult to scan.' },
+              { label: 'Lack of Effect Context:', text: 'Users did not understand how a product would physically or mentally impact them.' },
+              { label: 'Purchasing Rigidity:', text: 'No clear, intuitive way to select different weights or bulk quantities.' },
+              { label: 'Sensory Ambiguity:', text: 'Lack of clarity on flavors and aromatic profiles.' }
+            ]
+          },
+          {
+            title: 'Goal:',
+            items: [
+              { label: 'Cognitive Ease:', text: 'Implementing iconography to explain complex effects.' },
+              { label: 'Data Scannability:', text: 'Structuring data to be scannable for both novice and expert users.' },
+              { label: 'Purchasing Rigidity:', text: 'Adding a dynamic weight selector to facilitate larger orders.' }
+            ]
+          }
+        ]
       },
       {
-        title: 'Stage 3. Visual Overhaul',
-        subtitle: 'CLEAN INTERFACE',
-        content: 'Implemented a clean, grid-based layout that maintains consistency with the brand identity while improving readability across devices.'
+        title: 'Wireframe',
+        subtitle: 'IDEATION',
+        content: 'I created low-fidelity wireframes to explore key flows and functionality. Early prototypes helped refine interactions, and as the design progressed, I increased fidelity to shape the final experience.',
+        image: 'https://i.postimg.cc/xfCRfz4K/wireframe.png?dl=1',
+        imageSize: 'small'
+      },
+      {
+        title: 'Before/After',
+        subtitle: 'TRANSFORMATION',
+        comparison: {
+          before: {
+            header: 'The original interface acted more as a catalog than a decision-making tool.',
+            image: 'https://i.postimg.cc/mbM4dPw9/before.png?dl=1',
+            points: [
+              { label: 'Information Silos:', text: 'Critical data like effects and flavor profiles were missing, forcing users to search elsewhere.' },
+              { label: 'Static Purchasing:', text: 'The interface lacked flexibility for users wanting to buy in bulk or select different weights, leading to cart abandonment.' },
+              { label: 'Educational Gap:', text: 'Users felt lost regarding the "experience" level of the product, as the UI offered no guidance on strain characteristics.' },
+              { label: 'Visual Noise:', text: 'Cluttered layout with poor information hierarchy made it difficult to scan technical details.' }
+            ]
+          },
+          after: {
+            header: 'The redesigned interface empowers the user by transforming complex data into intuitive, actionable insights.',
+            image: 'https://i.postimg.cc/p2nWgG2m/GIF1.gif?dl=1',
+            points: [
+              { label: 'Contextual Guidance:', text: 'Integrated Effect Profile icons (Calming, Balanced, Heady) allow users to instantly align the product with their desired experience.' },
+              { label: 'Dynamic Flexibility:', text: 'A new Available Weights selector streamlines the purchase flow, enabling easy selection from 1/8 oz to 1 oz without friction.' },
+              { label: 'Sensory Transparency:', text: 'Added Top Flavours and a detailed Terpene Breakdown to humanize the product and build consumer trust.' },
+              { label: 'Hierarchical Clarity:', text: 'Optimized whitespace and typography create a clean, scannable layout, allowing users to find technical data (THC/CBD) or product descriptions at a glance.' }
+            ]
+          }
+        }
+      },
+      {
+        title: 'Design Solutions',
+        subtitle: 'SYSTEM ARCHITECTURE',
+        solutions: [
+          {
+            image: 'https://i.postimg.cc/SShnVFWq/designsolutions.png?dl=1',
+            points: [
+              { label: 'Contextual Guidance:', text: 'Integrated Effect Profile icons (Calming, Balanced, Heady) allow users to instantly align the product with their desired experience.' },
+              { label: 'Dynamic Flexibility:', text: 'A new Available Weights selector streamlines the purchase flow, enabling easy selection from 1/8 oz to 1 oz without friction.' },
+              { label: 'Sensory Transparency:', text: 'Added Top Flavours and a detailed Terpene Breakdown to humanize the product and build consumer trust.' },
+              { label: 'Hierarchical Clarity:', text: 'Optimized whitespace and typography create a clean, scannable layout, allowing users to find technical data (THC/CBD) or product descriptions at a glance.' }
+            ]
+          },
+          {
+            image: 'https://i.postimg.cc/KG21QSn1/designsolutions2.png?dl=1',
+            fullWidth: true
+          }
+        ]
       }
     ]
   },
@@ -81,7 +153,7 @@ const PROJECT_DATA: Record<string, any> = {
     role: 'Visual Designer',
     industry: 'Fintech',
     duration: '3 months',
-    image: '/regenerated_image_1777404148000.png',
+    image: 'https://i.postimg.cc/g2bj1zyT/1.jpg',
     gallery: [
       '/kore_rebranding.png',
       '/regenerated_image_1777404148000.png',
@@ -115,7 +187,7 @@ const PROJECT_DATA: Record<string, any> = {
     role: 'Web Designer & Illustrator',
     industry: 'Fintech',
     duration: '3 months',
-    image: '/regenerated_image_1777404141454.png',
+    image: 'https://i.postimg.cc/prNyxPbX/f4ac37211275387.png',
     stages: [
       {
         title: 'Stage 1. Content Strategy',
@@ -242,10 +314,9 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
         )}
 
         {project.stages.map((stage: any, i: number) => {
-          const stageNumber = (i + 1).toString().padStart(2, '0');
+          const stageLabel = i === 0 ? 'OVERVIEW' : i.toString().padStart(2, '0');
           // Try to extract title if it starts with "Stage X. "
           const displayTitle = stage.title.replace(/^Stage \d+\. /, '').toUpperCase();
-          const subtitle = stage.subtitle || "PHASE ANALYSIS";
 
           return (
             <motion.div 
@@ -256,48 +327,144 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
               className="space-y-12"
             >
               <div className="space-y-4">
-                <span className="text-[10px] font-mono text-hextech-green/40 tracking-[4px]">{stageNumber}</span>
+                <span className="text-[10px] font-mono text-hextech-green/40 tracking-[4px]">{stageLabel}</span>
                 <h2 className="text-4xl md:text-6xl font-display text-aether-white uppercase tracking-tighter">{displayTitle}</h2>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-                <div className="md:col-span-4 translate-y-1">
-                  <span className="text-[10px] font-sans font-bold uppercase tracking-[6px] text-hextech-green/60">
-                    {subtitle}
-                  </span>
-                </div>
-                <div className={`md:col-span-8 space-y-6 text-lg font-light leading-relaxed text-aether-white/80 ${stage.italic ? 'italic' : ''}`}>
-                  <p>{stage.content}</p>
+                <div className={`md:col-span-12 space-y-6 text-lg font-light leading-relaxed text-aether-white/80 whitespace-pre-line`}>
+                  {stage.content && <p>{stage.content}</p>}
+                  
+                  {stage.sections && (
+                    <div className="space-y-12 bg-worn-carbon/30 p-8 md:p-12 rounded-[4px] border border-hextech-green/10">
+                      {stage.sections.map((section: any, idx: number) => (
+                        <div key={idx} className="space-y-8">
+                          <h3 className="text-2xl font-display text-hextech-green uppercase tracking-widest">{section.title}</h3>
+                          <div className="space-y-6">
+                            {section.items.map((item: any, i: number) => (
+                              <div key={i} className="space-y-1">
+                                <div className="font-display text-aether-white text-lg">{item.label}</div>
+                                <div className="text-aether-white/50 text-base font-light">{item.text}</div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {stage.comparison && (
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
+                      {/* Before */}
+                      <div className="space-y-8">
+                        <div className="bg-worn-carbon/30 p-6 md:p-8 rounded-[4px] border border-hextech-green/10 space-y-6 h-full flex flex-col">
+                          <div className="space-y-4 flex-grow">
+                            <h3 className="text-xl font-display text-aether-white/60 uppercase tracking-widest">Before</h3>
+                            <p className="text-base text-aether-white/90 font-light leading-relaxed">
+                              {stage.comparison.before.header}
+                            </p>
+                            <div className="space-y-4 pt-4">
+                              {stage.comparison.before.points.map((item: any, i: number) => (
+                                <div key={i} className="space-y-1">
+                                  <div className="font-display text-aether-white/80 text-sm">{item.label}</div>
+                                  <div className="text-aether-white/40 text-[13px] font-light leading-relaxed">{item.text}</div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                          <div className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon mt-8 p-8">
+                            <img src={stage.comparison.before.image} alt="Before" className="w-full h-auto" />
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* After */}
+                      <div className="space-y-8">
+                        <div className="bg-worn-carbon/30 p-6 md:p-8 rounded-[4px] border border-hextech-green/10 space-y-6 h-full flex flex-col">
+                          <div className="space-y-4 flex-grow">
+                            <h3 className="text-xl font-display text-hextech-green uppercase tracking-widest">After</h3>
+                            <p className="text-base text-aether-white font-light leading-relaxed">
+                              {stage.comparison.after.header}
+                            </p>
+                            <div className="space-y-4 pt-4">
+                              {stage.comparison.after.points.map((item: any, i: number) => (
+                                <div key={i} className="space-y-1">
+                                  <div className="font-display text-hextech-green/80 text-sm">{item.label}</div>
+                                  <div className="text-aether-white/60 text-[13px] font-light leading-relaxed">{item.text}</div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                          <div className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon mt-8 p-8">
+                            <img src={stage.comparison.after.image} alt="After" className="w-full h-auto" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {stage.solutions && (
+                    <div className="space-y-24 mt-12">
+                      {stage.solutions.map((sol: any, idx: number) => (
+                        <div key={idx} className={`grid grid-cols-1 ${sol.fullWidth ? 'md:grid-cols-1' : 'md:grid-cols-2'} gap-12 items-start`}>
+                          {!sol.fullWidth && sol.points && (
+                            <div className="space-y-8">
+                              {sol.points.map((item: any, i: number) => (
+                                <div key={i} className="space-y-2">
+                                  <div className="font-display text-hextech-green text-lg tracking-wide">{item.label}</div>
+                                  <div className="text-aether-white/60 text-[15px] font-light leading-relaxed">{item.text}</div>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                          <motion.div 
+                            initial={{ opacity: 0, scale: 0.98 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            className={`rounded-[4px] overflow-hidden bg-worn-carbon shadow-2xl ${sol.fullWidth ? 'w-full' : ''}`}
+                          >
+                            <img src={sol.image} alt="Design Solution" className="w-full h-auto" />
+                          </motion.div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
 
               {stage.image && (
-                <div className="w-full mt-16">
+                <div className={`w-full mt-16 ${stage.imageSize === 'small' ? 'flex justify-center' : ''}`}>
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon shadow-2xl shadow-black/50"
+                    className={`rounded-[4px] overflow-hidden hextech-border bg-worn-carbon shadow-2xl shadow-black/50 ${stage.imageSize === 'small' ? 'md:w-3/4 w-full mx-auto' : 'w-full'}`}
                   >
                     <img src={stage.image} alt={stage.title} className="w-full h-auto" />
                   </motion.div>
+                </div>
+              )}
+
+              {stage.imagesGrid && (
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+                  {stage.imagesGrid.map((imgUrl: string, idx: number) => (
+                    <motion.div 
+                      key={idx}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: idx * 0.1 }}
+                      className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon shadow-xl shadow-black/30"
+                    >
+                      <img src={imgUrl} alt={`${stage.title} detail ${idx + 1}`} className="w-full h-auto" />
+                    </motion.div>
+                  ))}
                 </div>
               )}
             </motion.div>
           );
         })}
 
-        {/* Static Visual Context Placeholders (same layout as original) */}
-        {projectId === 'Campaign Builder for Blaze Ecom' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-16">
-            <div className="aspect-[4/3] rounded-[4px] bg-worn-carbon hextech-border p-4">
-               <div className="w-full h-full bg-matrix-green/10 flex items-center justify-center text-[10px] tracking-[4px] uppercase text-hextech-green/40">Visual Context 01</div>
-            </div>
-            <div className="aspect-[4/3] rounded-[4px] bg-worn-carbon hextech-border p-4">
-               <div className="w-full h-full bg-matrix-green/10 flex items-center justify-center text-[10px] tracking-[4px] uppercase text-hextech-green/40">Visual Context 02</div>
-            </div>
-          </div>
-        )}
       </section>
 
       {/* Other Projects Section */}
@@ -318,7 +485,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                     <img src={p.image} alt={p.title} className="w-full h-full object-cover opacity-60 transition-all group-hover:opacity-100 group-hover:scale-105" />
                   </div>
                   <h3 className="text-xl font-display mb-2 group-hover:text-hextech-green transition-colors">{p.title}</h3>
-                  <p className="text-aether-white/40 font-light">{p.description.substring(0, 80)}...</p>
+                  <p className="text-aether-white/40 font-light">{p.description}</p>
                 </div>
              ))}
           </div>

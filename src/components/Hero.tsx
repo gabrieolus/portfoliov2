@@ -31,8 +31,8 @@ export default function Hero() {
             className="flex gap-4"
           >
             {[
-              { icon: <LinkedInIcon width={17} />, href: "https://www.linkedin.com/in/gabrieolus/" },
-              { icon: <BehanceIcon width={21} height={12.5} />, href: "https://behance.net/gabrieolus" },
+              { icon: <LinkedInIcon width={17} height={17} />, href: "https://www.linkedin.com/in/gabrieolus/" },
+              { icon: <BehanceIcon width={20} height={20} />, href: "https://behance.net/gabrieolus" },
             ].map((social, i) => (
               <a 
                 key={i}

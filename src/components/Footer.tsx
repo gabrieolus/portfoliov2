@@ -8,8 +8,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex justify-center">
         <div className="flex gap-4">
           {[
-            <a href="https://www.linkedin.com/in/gabrieolus/" target="_blank" rel="noopener noreferrer"><LinkedInIcon width={18} height={17} /></a>,
-            <a href="https://behance.net/gabrieolus" target="_blank" rel="noopener noreferrer"><BehanceIcon width={21} height={10} /></a>,
+            <a href="https://www.linkedin.com/in/gabrieolus/" target="_blank" rel="noopener noreferrer"><LinkedInIcon width={17} height={17} /></a>,
+            <a href="https://behance.net/gabrieolus" target="_blank" rel="noopener noreferrer"><BehanceIcon width={20} height={20} /></a>,
           ].map((icon, i) => (
             <div key={i} className="w-11 h-11 rounded-[4px] hextech-border flex items-center justify-center hover:bg-white/5 transition-all">
               {icon}

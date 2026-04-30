@@ -4,25 +4,25 @@ const projects = [
   {
     title: 'Campaign Builder for Blaze Ecom',
     description: 'This project focuses on the campaign management section of a cannabis e-commerce dashboard. It helps store owners create and track marketing campaigns in one place.',
-    image: '/regenerated_image_1777404142590.png',
+    image: 'https://i.postimg.cc/KvSm89KT/cover-campaign-builder.png',
     category: 'Product Design'
   },
   {
     title: 'Blaze Product Page Redesign',
     description: 'The product page created confusion, making it difficult for users to quickly understand the offerings. A new structure made it easy to find products.',
-    image: '/regenerated_image_1777404144725.png',
+    image: 'https://i.postimg.cc/13PSSfgt/mainpageblaze.png',
     category: 'UI/UX Design'
   },
   {
     title: 'Kore Rebranding',
     description: 'This project showcases the rebranding and logo redesign for Kore, a Canadian fintech offering an all-in-one platform for the private capital market.',
-    image: '/regenerated_image_1777404148000.png',
+    image: 'https://i.postimg.cc/g2bj1zyT/1.jpg',
     category: 'Branding'
   },
   {
     title: 'Kore - Website',
     description: 'A comprehensive design and illustration project for Kore\'s digital presence, including motion graphics and website layout.',
-    image: '/regenerated_image_1777404141454.png', 
+    image: 'https://i.postimg.cc/prNyxPbX/f4ac37211275387.png', 
     category: 'Web Design'
   }
 ];
