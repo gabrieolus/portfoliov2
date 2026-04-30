@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Roboto", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-forge-void: #05070A;
+  --color-aether-white: #E6F1EC;
+  --color-hextech-green: #00FF9C;
+  --color-matrix-green: #00C97A;
+  --color-worn-carbon: #141A1F;
+}
+
+@layer base {
+  body {
+    @apply bg-forge-void text-aether-white selection:bg-hextech-green selection:text-forge-void font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display uppercase tracking-normal font-normal;
+  }
+}
+
+@utility hextech-border {
+  border: 1px solid rgba(0, 255, 156, 0.4);
+}
+
+@utility glass-surface {
+  @apply bg-worn-carbon/50 backdrop-blur-sm hextech-border rounded-[4px];
+}
+
+.btn-micro {
+  @apply font-sans font-bold uppercase tracking-wider text-[10px] py-3 px-6 transition-all duration-300 rounded-[4px];
+}

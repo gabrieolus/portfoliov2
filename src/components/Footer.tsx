@@ -1,0 +1,25 @@
+import { BehanceIcon, LinkedInIcon } from './BrandIcons';
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  
+  return (
+    <footer className="px-6 py-20 border-t hextech-border">
+      <div className="max-w-7xl mx-auto flex justify-center">
+        <div className="flex gap-4">
+          {[
+            <a href="https://www.linkedin.com/in/gabrieolus/" target="_blank" rel="noopener noreferrer"><LinkedInIcon width={18} height={17} /></a>,
+            <a href="https://behance.net/gabrieolus" target="_blank" rel="noopener noreferrer"><BehanceIcon width={21} height={10} /></a>,
+          ].map((icon, i) => (
+            <div key={i} className="w-11 h-11 rounded-[4px] hextech-border flex items-center justify-center hover:bg-white/5 transition-all">
+              {icon}
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="text-center mt-20 text-[9px] text-aether-white/20 uppercase tracking-[4px] font-bold">
+        Copyright {currentYear} by Gabriel Fiore • Digital Experience Architect
+      </div>
+    </footer>
+  );
+}
