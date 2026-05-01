@@ -358,7 +358,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start text-center">
-                <div className={`md:col-span-12 space-y-6 text-lg font-light leading-relaxed text-aether-white/80 whitespace-pre-line max-w-5xl mx-auto ${i === 4 ? 'text-left bg-worn-carbon/30 p-4 rounded-[4px] border border-hextech-green/20' : ''}`}>
+                <div className={`md:col-span-12 space-y-6 text-lg font-light leading-relaxed text-aether-white/80 whitespace-pre-line max-w-5xl mx-auto ${i === 4 ? 'text-center bg-worn-carbon/30 p-4 rounded-[4px] border border-hextech-green/20' : ''}`}>
                   {stage.content && <p>{stage.content}</p>}
                   
                   {stage.sections && (
