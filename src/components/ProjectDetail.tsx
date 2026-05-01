@@ -145,6 +145,20 @@ const PROJECT_DATA: Record<string, any> = {
       }
     ]
   },
+  'Kore.Builders': {
+    title: 'Kore.Builders',
+    subtitle: 'Platform',
+    description: 'A specialized platform for the private capital market, designed to empower developers and founders with the infrastructure needed to build and launch financial products.',
+    role: 'UI/UX Designer',
+    industry: 'Fintech / Infrastructure',
+    duration: '1 month',
+    image: 'https://i.postimg.cc/yYqPL7zD/2.gif',
+    gallery: [
+      'https://i.postimg.cc/5JRZzvCx/v2.png',
+      'https://i.postimg.cc/nZ9NGz4M/v3.png'
+    ],
+    stages: []
+  },
   'Kore Rebranding': {
     title: 'Kore Rebranding',
     subtitle: 'Fintech Identity',
@@ -292,7 +306,9 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
               
               let colSpan = "md:col-span-2"; // default for 3 items
               
-              if (projectId === 'Kore - Website') {
+              if (projectId === 'Kore.Builders') {
+                colSpan = "md:col-span-6"; // 1 item row
+              } else if (projectId === 'Kore - Website') {
                 const patternIndex = index % 5;
                 if (patternIndex < 2) {
                   colSpan = "md:col-span-3"; // 2 items row

@@ -14,6 +14,12 @@ const projects = [
     category: 'UI/UX Design'
   },
   {
+    title: 'Kore.Builders',
+    description: 'A specialized platform for the private capital market, designed to empower developers and founders with robust building tools.',
+    image: 'https://i.postimg.cc/yYqPL7zD/2.gif',
+    category: 'UI/UX Design / Platform'
+  },
+  {
     title: 'Kore Rebranding',
     description: 'This project showcases the rebranding and logo redesign for Kore, a Canadian fintech offering an all-in-one platform for the private capital market.',
     image: 'https://i.postimg.cc/rsvRT9JX/2.gif',

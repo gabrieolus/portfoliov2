@@ -10,23 +10,22 @@ export default function Hero() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.05 }}
-            className="flex items-center gap-4 mb-8"
+            className="flex items-center gap-6 mb-10"
           >
             <img 
               src="https://i.postimg.cc/4xZJVtKD/headshotgabriel.png" 
               alt="Gabriel Fiore" 
-              className="w-12 h-12 rounded-full object-cover border border-hextech-green/30"
+              className="w-24 h-24 rounded-full object-cover border-2 border-hextech-green/30 shadow-[0_0_20px_rgba(30,255,188,0.1)]"
             />
-            <span className="text-xl font-medium text-aether-white/90">I'm Gabriel Fiore</span>
           </motion.div>
 
           <motion.h1 
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-[50px] font-display leading-[45px] tracking-normal mb-12 max-w-3xl"
+            className="text-4xl md:text-[50px] font-display leading-[55px] tracking-tight mb-12 max-w-3xl"
           >
-            a Product Designer crafting <span className="text-hextech-green">intuitive and impactful digital experiences.</span>
+            I'm <span className="text-hextech-green">Gabriel Fiore</span>, a Product Designer crafting <span className="text-hextech-green">intuitive and impactful digital experiences.</span>
           </motion.h1>
           
           <motion.p 
