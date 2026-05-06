@@ -380,7 +380,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                   )}
 
                   {stage.comparison && (
-                    <div className="grid grid-cols-1 gap-12 mt-12 max-w-4xl mx-auto text-left"">
+                   <div className="grid grid-cols-1 gap-12 mt-12 max-w-4xl mx-auto text-left">
                       {/* Before */}
                       <div className="space-y-8">
                         <div className="bg-worn-carbon/30 p-6 md:p-8 rounded-[4px] border border-hextech-green/10 space-y-6 h-full flex flex-col">
