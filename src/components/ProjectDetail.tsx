@@ -422,7 +422,19 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                             </div>
                           </div>
                           <div className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon mt-8 p-8">
-                            <img src={stage.comparison.after.image} alt="After" className="w-full h-auto" />
+  {stage.comparison.after.video ? (
+    <video
+      src={stage.comparison.after.video}
+      autoPlay
+      muted
+      loop
+      playsInline
+      className="w-full h-auto"
+    />
+  ) : (
+    <img src={stage.comparison.after.image} alt="After" className="w-full h-auto" />
+  )}
+</div>
                           </div>
                         </div>
                       </div>
