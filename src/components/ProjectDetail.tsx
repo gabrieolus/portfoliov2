@@ -421,7 +421,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                               ))}
                             </div>
                           </div>
-                          <div className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon mt-8 p-8">
+<div className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon mt-8 p-8">
   {stage.comparison.after.video ? (
     <video
       src={stage.comparison.after.video}
