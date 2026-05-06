@@ -114,7 +114,7 @@ const PROJECT_DATA: Record<string, any> = {
           },
           after: {
             header: 'The redesigned interface empowers the user by transforming complex data into intuitive, actionable insights.',
-            image: 'https://res.cloudinary.com/dzjegtldc/video/upload/OD15EW1_wxqufk.mp4',
+            video: 'https://res.cloudinary.com/dzjegtldc/video/upload/OD15EW1_wxqufk.mp4',
             points: [
               { label: 'Contextual Guidance:', text: 'Integrated Effect Profile icons (Calming, Balanced, Heady) allow users to instantly align the product with their desired experience.' },
               { label: 'Dynamic Flexibility:', text: 'A new Available Weights selector streamlines the purchase flow, enabling easy selection from 1/8 oz to 1 oz without friction.' },
