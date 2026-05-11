@@ -4,9 +4,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="py-10 border-t border-green-500 w-full">
-      <div className="w-full px-6 text-center">
-        <div className="flex justify-center mb-10">
+    <footer className="py-20 border-t hextech-border w-full">
+      <div className="max-w-[1720px] mx-auto px-6 text-center">
+        <div className="flex justify-center mb-20">
           <div className="flex gap-4">
             {[
               <a href="https://www.linkedin.com/in/gabrieolus/" target="_blank" rel="noopener noreferrer"><LinkedInIcon width={17} height={17} /></a>,

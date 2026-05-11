@@ -114,7 +114,7 @@ const PROJECT_DATA: Record<string, any> = {
           },
           after: {
             header: 'The redesigned interface empowers the user by transforming complex data into intuitive, actionable insights.',
-            video: 'https://res.cloudinary.com/dzjegtldc/video/upload/render_1_m7mdyr.mp4',
+            image: 'https://i.postimg.cc/p2nWgG2m/GIF1.gif?dl=1',
             points: [
               { label: 'Contextual Guidance:', text: 'Integrated Effect Profile icons (Calming, Balanced, Heady) allow users to instantly align the product with their desired experience.' },
               { label: 'Dynamic Flexibility:', text: 'A new Available Weights selector streamlines the purchase flow, enabling easy selection from 1/8 oz to 1 oz without friction.' },
@@ -205,7 +205,19 @@ const PROJECT_DATA: Record<string, any> = {
       'https://i.postimg.cc/8561SbfF/8.gif',
       'https://i.postimg.cc/43MJq0dM/9.jpg'
     ],
-    stages: []
+    stages: [
+      {
+        title: 'Design System',
+        subtitle: 'FLOW',
+        content: 'Built on Atomic Design principles, Flow became the unified design system powering KoreConX. Leveraging the foundational architecture established by former Principal Designer Vinicius Almeida and José Façanha, my team scaled the system into a mature library of components, design tokens, and interaction behaviors that enabled consistency and efficiency across Product Design, Graphic Design, and Engineering.',
+        video: 'https://res.cloudinary.com/dzjegtldc/video/upload/v1778512277/Free-Laptop-Mockup_2_z9z0vv.mp4',
+        twoColsGrid: [
+          'https://res.cloudinary.com/dzjegtldc/image/upload/v1778513322/2_dfpv8y.png',
+          'https://res.cloudinary.com/dzjegtldc/image/upload/v1778518535/3_tidejg.png'
+        ],
+        afterGridImage: 'https://res.cloudinary.com/dzjegtldc/image/upload/v1778519294/4_sf2trr.png'
+      }
+    ]
   }
 };
 
@@ -380,7 +392,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                   )}
 
                   {stage.comparison && (
-                   <div className="grid grid-cols-1 gap-12 mt-12 max-w-4xl mx-auto text-left">
+                    <div className="grid grid-cols-1 gap-12 mt-12 max-w-4xl mx-auto text-left">
                       {/* Before */}
                       <div className="space-y-8">
                         <div className="bg-worn-carbon/30 p-6 md:p-8 rounded-[4px] border border-hextech-green/10 space-y-6 h-full flex flex-col">
@@ -422,18 +434,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                             </div>
                           </div>
                           <div className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon mt-8 p-8">
-                            {stage.comparison.after.video ? (
-                              <video
-                                src={stage.comparison.after.video}
-                                autoPlay
-                                muted
-                                loop
-                                playsInline
-                                className="w-full h-auto"
-                              />
-                            ) : (
-                              <img src={stage.comparison.after.image} alt="After" className="w-full h-auto" />
-                            )}
+                            <img src={stage.comparison.after.image} alt="After" className="w-full h-auto" />
                           </div>
                         </div>
                       </div>
@@ -482,6 +483,19 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                 </div>
               )}
 
+              {stage.video && (
+                <div className={`w-full mt-16 ${stage.videoSize === 'small' ? 'flex justify-center' : ''}`}>
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className={`rounded-[4px] overflow-hidden hextech-border bg-worn-carbon shadow-2xl shadow-black/50 ${stage.videoSize === 'small' ? 'md:w-3/4 w-full mx-auto' : 'w-full'}`}
+                  >
+                    <video src={stage.video} autoPlay loop muted playsInline className="w-full h-auto" />
+                  </motion.div>
+                </div>
+              )}
+
               {stage.imagesGrid && (
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
                   {stage.imagesGrid.map((imgUrl: string, idx: number) => (
@@ -496,6 +510,36 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                       <img src={imgUrl} alt={`${stage.title} detail ${idx + 1}`} className="w-full h-auto" />
                     </motion.div>
                   ))}
+                </div>
+              )}
+
+              {stage.twoColsGrid && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
+                  {stage.twoColsGrid.map((imgUrl: string, idx: number) => (
+                    <motion.div 
+                      key={`twocol-${idx}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: idx * 0.1 }}
+                      className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon shadow-xl shadow-black/30"
+                    >
+                      <img src={imgUrl} alt={`${stage.title} detail ${idx + 1}`} className="w-full h-auto" />
+                    </motion.div>
+                  ))}
+                </div>
+              )}
+
+              {stage.afterGridImage && (
+                <div className="w-full mt-16">
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon shadow-2xl shadow-black/50 w-full"
+                  >
+                    <img src={stage.afterGridImage} alt={stage.title} className="w-full h-auto" />
+                  </motion.div>
                 </div>
               )}
             </motion.div>
