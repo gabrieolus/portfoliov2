@@ -1,43 +1,45 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 const projects = [
   {
     title: 'Campaign Builder for Blaze Ecom',
+    slug: 'blaze-campaign-builder',
     description: 'This project focuses on the campaign management section of a cannabis e-commerce dashboard. It helps store owners create and track marketing campaigns in one place.',
     image: 'https://i.postimg.cc/KvSm89KT/cover-campaign-builder.png',
     category: 'Product Design'
   },
   {
     title: 'Blaze Product Page Redesign',
+    slug: 'blaze-product-page-redesign',
     description: 'The product page created confusion, making it difficult for users to quickly understand the offerings. A new structure made it easy to find products.',
     image: 'https://i.postimg.cc/13PSSfgt/mainpageblaze.png',
     category: 'UI/UX Design'
   },
   {
     title: 'Kore.Builders',
+    slug: 'kore-builders',
     description: 'A specialized platform for the private capital market, designed to empower developers and founders with robust building tools.',
     image: 'https://i.postimg.cc/yYqPL7zD/2.gif',
     category: 'UI/UX Design / Platform'
   },
   {
     title: 'Kore Rebranding',
+    slug: 'kore-rebranding',
     description: 'This project showcases the rebranding and logo redesign for Kore, a Canadian fintech offering an all-in-one platform for the private capital market.',
     image: 'https://i.postimg.cc/rsvRT9JX/2.gif',
     category: 'UI/UX Design / Branding'
   },
   {
     title: 'Kore - Website',
+    slug: 'kore-website',
     description: 'A comprehensive design and illustration project for Kore\'s digital presence, including motion graphics and website layout.',
     image: 'https://i.postimg.cc/prNyxPbX/f4ac37211275387.png', 
     category: 'Web Design'
   }
 ];
 
-interface ProjectsProps {
-  onProjectClick: (id: string) => void;
-}
-
-export default function Projects({ onProjectClick }: ProjectsProps) {
+export default function Projects() {
   return (
     <section id="projects" className="pt-4 pb-24">
       <div className="mb-24">
@@ -68,27 +70,28 @@ export default function Projects({ onProjectClick }: ProjectsProps) {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="group cursor-pointer"
-            onClick={() => onProjectClick(project.title)}
+            className="group block"
           >
-            <div className="aspect-[4/3] rounded-[4px] overflow-hidden mb-8 bg-worn-carbon hextech-border">
-              <img 
-                src={project.image} 
-                alt={project.title}
-                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-              />
-            </div>
-            <div className="space-y-6 md:max-w-[90%]">
-              <div className="uppercase tracking-[4px] text-[10px] font-bold text-hextech-green">
-                {project.category}
+            <Link to={`/cases/${project.slug}`} className="block block-inherit h-full">
+              <div className="aspect-[4/3] rounded-[4px] overflow-hidden mb-8 bg-worn-carbon hextech-border">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                />
               </div>
-              <h3 className="text-xl md:text-2xl font-display font-bold group-hover:text-hextech-green transition-colors">
-                {project.title}
-              </h3>
-              <p className="text-aether-white text-base leading-relaxed font-light max-w-5xl">
-                {project.description}
-              </p>
-            </div>
+              <div className="space-y-6 md:max-w-[90%]">
+                <div className="uppercase tracking-[4px] text-[10px] font-bold text-hextech-green">
+                  {project.category}
+                </div>
+                <h3 className="text-xl md:text-2xl font-display font-bold group-hover:text-hextech-green transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-aether-white text-base leading-relaxed font-light max-w-5xl">
+                  {project.description}
+                </p>
+              </div>
+            </Link>
           </motion.div>
         ))}
       </div>

@@ -1,11 +1,18 @@
 import { motion } from 'motion/react';
 import { ArrowLeft } from 'lucide-react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 
-interface ProjectDetailProps {
-  projectId: string;
-  onBack: () => void;
-  onProjectClick: (id: string) => void;
-}
+const SLUG_MAP: Record<string, string> = {
+  'blaze-campaign-builder': 'Campaign Builder for Blaze Ecom',
+  'blaze-product-page-redesign': 'Blaze Product Page Redesign',
+  'kore-builders': 'Kore.Builders',
+  'kore-rebranding': 'Kore Rebranding',
+  'kore-website': 'Kore - Website'
+};
+
+const REV_SLUG_MAP = Object.fromEntries(
+  Object.entries(SLUG_MAP).map(([s, t]) => [t, s])
+);
 
 const PROJECT_DATA: Record<string, any> = {
   'Campaign Builder for Blaze Ecom': {
@@ -257,20 +264,25 @@ const PROJECT_DATA: Record<string, any> = {
   }
 };
 
-export default function ProjectDetail({ projectId, onBack, onProjectClick }: ProjectDetailProps) {
-  const project = PROJECT_DATA[projectId] || PROJECT_DATA['Campaign Builder for Blaze Ecom'];
+export default function ProjectDetail() {
+  const { slug } = useParams<{ slug: string }>();
+  
+  const projectId = slug ? SLUG_MAP[slug] : null;
+  const project = projectId ? PROJECT_DATA[projectId] : null;
+
+  if (!project) return <div className="pt-40 text-center text-aether-white">Project not found</div>;
 
   return (
     <div className="min-h-screen bg-forge-void text-aether-white pt-32">
       {/* Back Button */}
       <div className="mb-16">
-        <button 
-          onClick={onBack}
-          className="group flex items-center gap-3 text-sm font-display uppercase tracking-[4px] text-hextech-green hover:opacity-80 transition-opacity"
+        <Link 
+          to="/"
+          className="group flex flex-row items-center gap-3 text-sm font-display uppercase tracking-[4px] text-hextech-green hover:opacity-80 transition-opacity w-fit"
         >
           <ArrowLeft size={16} className="transition-transform group-hover:-translate-x-1" />
           Back to Projects
-        </button>
+        </Link>
       </div>
 
       {/* Header */}
@@ -630,17 +642,17 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                .filter(p => p.title !== projectId)
                .slice(0, 2)
                .map((p, i) => (
-                <div 
+                <Link 
                   key={i} 
-                  className="group cursor-pointer"
-                  onClick={() => onProjectClick(p.title)}
+                  to={`/cases/${REV_SLUG_MAP[p.title]}`}
+                  className="group block h-full"
                 >
                   <div className="aspect-video bg-worn-carbon rounded-[4px] hextech-border mb-6 overflow-hidden">
                     <img src={p.image} alt={p.title} className="w-full h-full object-cover transition-all group-hover:scale-105" />
                   </div>
                   <h3 className="text-xl font-display mb-2 group-hover:text-hextech-green transition-colors">{p.title}</h3>
                   <p className="text-aether-white font-light max-w-3xl">{p.description}</p>
-                </div>
+                </Link>
              ))}
           </div>
         </div>

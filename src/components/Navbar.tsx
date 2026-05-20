@@ -1,10 +1,7 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
-interface NavbarProps {
-  onHomeClick: () => void;
-}
-
-export default function Navbar({ onHomeClick }: NavbarProps) {
+export default function Navbar() {
   return (
     <motion.nav 
       initial={{ y: -100, opacity: 0 }}
@@ -12,8 +9,8 @@ export default function Navbar({ onHomeClick }: NavbarProps) {
       className="fixed top-0 left-0 w-full z-50 py-6 bg-forge-void/80 backdrop-blur-md border-b border-hextech-green/10"
     >
       <div className="max-w-[1720px] mx-auto px-6 flex justify-between items-center">
-        <button 
-          onClick={onHomeClick}
+        <Link 
+          to="/"
           className="hover:opacity-80 transition-opacity flex items-center"
         >
           <div 
@@ -30,7 +27,7 @@ export default function Navbar({ onHomeClick }: NavbarProps) {
             }}
             aria-label="Gabriel Fiore"
           />
-        </button>
+        </Link>
         <div className="flex gap-10">
           {[
             { name: 'LinkedIn', href: 'https://www.linkedin.com/in/gabrieolus/' },
