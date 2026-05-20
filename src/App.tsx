@@ -26,7 +26,7 @@ export default function App() {
   return (
     <div className="min-h-screen font-sans selection:bg-aura-green selection:text-aura-black">
       <Navbar onHomeClick={handleBack} />
-      <main className="max-w-[1720px] mx-auto px-16">
+      <main className="max-w-[1720px] mx-auto px-6">
         {activeProject ? (
           <ProjectDetail 
             projectId={activeProject} 

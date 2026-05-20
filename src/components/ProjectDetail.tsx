@@ -393,11 +393,11 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
             >
               <div className="space-y-4 text-center">
                 <span className="text-[10px] font-mono text-hextech-green/40 tracking-[4px]">{stageLabel}</span>
-                <h2 className="text-4xl md:text-6xl font-display text-aether-white uppercase tracking-tighter max-w-5xl mx-auto">{displayTitle}</h2>
+                <h2 className="text-4xl md:text-6xl font-display text-aether-white uppercase tracking-tighter max-w-7xl mx-auto">{displayTitle}</h2>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start text-center">
-                <div className={`md:col-span-12 space-y-6 text-lg font-light leading-relaxed text-aether-white/80 whitespace-pre-line max-w-5xl mx-auto ${stage.contentBox ? 'text-left bg-worn-carbon/30 p-8 md:p-12 rounded-[4px] border border-hextech-green/20' : stage.centerBox ? 'text-center bg-worn-carbon/30 p-8 md:p-12 rounded-[4px] border border-hextech-green/20' : 'text-center'}`}>
+                <div className={`md:col-span-12 space-y-6 text-lg font-light leading-relaxed text-aether-white/80 whitespace-pre-line max-w-7xl mx-auto ${stage.contentBox ? 'text-left bg-worn-carbon/30 p-8 md:p-12 rounded-[4px] border border-hextech-green/20' : stage.centerBox ? 'text-center bg-worn-carbon/30 p-8 md:p-12 rounded-[4px] border border-hextech-green/20' : 'text-center'}`}>
                   {stage.content && <p>{stage.content}</p>}
                   
                   {stage.sections && (
@@ -581,7 +581,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
       {/* Other Projects Section */}
       <section className="pb-32 pt-16">
         <div className="text-center">
-          <h2 className="text-3xl font-display mb-16 max-w-5xl mx-auto">Other <span className="text-hextech-green">projects</span></h2>
+          <h2 className="text-3xl font-display mb-16 max-w-7xl mx-auto">Other <span className="text-hextech-green">projects</span></h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
              {Object.values(PROJECT_DATA)
                .filter(p => p.title !== projectId)
