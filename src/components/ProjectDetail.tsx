@@ -26,23 +26,24 @@ const PROJECT_DATA: Record<string, any> = {
       {
         title: 'Context & Research',
         subtitle: 'DISCOVERY',
-        content: "The product team conducted discovery before I joined the project. Based on the brief I received, the main findings were:\n\n— Store owners were spending excessive time creating campaigns due to a rigid, step-by-step flow that required all decisions upfront.\n— A significant portion of users abandoned the campaign builder before publishing, often because they couldn't easily revisit earlier choices.\n— The existing interface treated all campaign types the same way, even though recurring and one-time campaigns have very different configuration needs.\n\nMy starting point was this briefing. From there, I ran a competitive analysis of tools like Klaviyo, Mailchimp, and ActiveCampaign to understand common patterns — and identify where I could take a different approach."
+        content: "The product team conducted discovery before I joined the project. Based on the brief I received, the main findings were:\n\n• Store owners were spending excessive time creating campaigns due to a rigid, step-by-step flow that required all decisions upfront.\n\n• A significant portion of users abandoned the campaign builder before publishing, often because they couldn't easily revisit earlier choices.\n\n• The existing interface treated all campaign types the same way, even though recurring and one-time campaigns have very different configuration needs.\n\nMy starting point was this briefing. From there, I ran a competitive analysis of tools like Klaviyo, Mailchimp, and ActiveCampaign to understand common patterns and identify where I could take a different approach."
       },
       {
         title: 'The challenge',
         subtitle: 'PROBLEM STATEMENT',
-        content: 'The core challenge was reducing friction in the campaign creation process without taking away flexibility. Store owners needed to move fast — but the existing flow forced every decision upfront, in a fixed order, with no easy way to go back. The goal was to redesign this experience so users could build campaigns progressively, at their own pace.'
+        content: 'The core challenge was reducing friction in the campaign creation process without taking away flexibility. Store owners needed to move fast but the existing flow forced every decision upfront, in a fixed order, with no easy way to go back. The goal was to redesign this experience so users could build campaigns progressively, at their own pace.'
       },
       {
         title: 'The idea',
         subtitle: 'CONCEPTUAL APPROACH',
-        content: 'The idea came from questioning the default assumption of campaign builders: that users need to be guided step by step. Instead, I explored what it would look like to treat a campaign as a set of independent modules — each configurable on its own, in any order — giving users structure without forcing a rigid sequence.',
+        content: 'The idea came from questioning the default assumption of campaign builders: that users need to be guided step by step. Instead, I explored what it would look like to treat a campaign as a set of independent modules, each configurable on its own, in any order, giving users structure without forcing a rigid sequence.',
         image: 'https://res.cloudinary.com/dzjegtldc/image/upload/v1779236310/linearvsmodular_pflcnp.png',
         imageSize: 'small'
       },
       {
         title: 'Main focus',
         subtitle: 'CORE PRIORITIES',
+        centerBox: true,
         content: '• Reducing unnecessary steps\n• Making the flow adaptable instead of linear\n• Keeping key decisions visible throughout the process',
         image: 'https://i.postimg.cc/NgcL4kxd/web-mockup-V1-frontv2123.jpg?dl=1',
         imagesGrid: [
@@ -54,13 +55,29 @@ const PROJECT_DATA: Record<string, any> = {
       {
         title: 'Outcome',
         subtitle: 'FINAL RESULTS',
-        content: "The final solution is a modular campaign builder that separates the creation flow into independent, reconfigurable sections — allowing store owners to build campaigns at their own pace without losing progress or context.\nAs a designer who joined after the research phase, I didn't have direct access to post-launch performance data. However, the success criteria aligned with the product team from the start were clear: reduce the time users spent configuring a campaign, decrease drop-off before publishing, and lower the volume of support tickets related to campaign setup.\nIf I were to define how I'd measure this solution's impact, I'd track three things: task completion rate within the campaign creation flow, average time from campaign creation to first publish, and reduction in support contacts related to campaign management. These were the problems the brief pointed to — and they're the right indicators to know whether the design actually solved them.",
+        centerBox: true,
+        content: (
+          <span>
+            The final solution is a modular campaign builder that separates the creation flow into independent, reconfigurable sections, allowing store owners to build campaigns at their own pace without losing progress or context.
+            {'\n\n'}
+            As a designer who joined after the research phase, I didn't have direct access to post-launch performance data. However, the success criteria aligned with the product team from the start were clear, and if I were to define how I'd measure this solution's impact, I would track three things:
+            {'\n\n'}
+            • <span className="text-hextech-green font-bold">Task Completion Rate</span>: Monitoring the percentage of users who complete the campaign creation flow to see if we successfully decreased drop-off before publishing.
+            {'\n\n'}
+            • <span className="text-hextech-green font-bold">Time to Publish</span>: Tracking the average time from campaign creation to first publish to ensure we reduced the time users spent configuring a campaign.
+            {'\n\n'}
+            • <span className="text-hextech-green font-bold">Support Ticket Volume</span>: Measuring the reduction in support contacts related to campaign management to confirm the interface is more intuitive and less frustrating.
+            {'\n\n'}
+            These were the exact problems the brief pointed to, and they are the right indicators to know whether the design actually solved them.
+          </span>
+        ),
         image: 'https://i.postimg.cc/KjGYFMPD/outcome.png'
       },
       {
         title: 'Learnings',
         subtitle: 'TAKEAWAYS',
-        content: "Working from a PM brief, without direct access to user research, pushed me to ask better questions before opening Figma. I learned to treat the briefing as a starting point, not a spec: map the assumptions, identify the gaps, and align on what we actually knew versus what we were betting on.\nIf I were to revisit this project, I would have pushed for at least one round of usability testing on the campaign creation flow before locking the modular structure. The concept made sense in theory, but I never got the chance to watch a real store owner navigate it from scratch, which is always where the most important insights show up.\nThe biggest takeaway: define success criteria at the start of the process, not the end. Designing without a clear metric is designing without a target. And without a target, it's hard to know when the work is actually done."
+        centerBox: true,
+        content: "Working from a PM brief, without direct access to user research, pushed me to ask better questions before opening Figma. I learned to treat the briefing as a starting point, not a spec: map the assumptions, identify the gaps, and align on what we actually knew versus what we were betting on.\n\nIf I were to revisit this project, I would have pushed for at least one round of usability testing on the campaign creation flow before locking the modular structure. The concept made sense in theory, but I never got the chance to watch a real store owner navigate it from scratch, which is always where the most important insights show up.\n\nThe biggest takeaway: define success criteria at the start of the process, not the end. Designing without a clear metric is designing without a target. And without a target, it's hard to know when the work is actually done."
       }
     ]
   },
@@ -380,7 +397,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start text-center">
-                <div className={`md:col-span-12 space-y-6 text-lg font-light leading-relaxed text-aether-white/80 whitespace-pre-line max-w-5xl mx-auto ${i === 4 ? 'text-center bg-worn-carbon/30 p-4 rounded-[4px] border border-hextech-green/20' : ''}`}>
+                <div className={`md:col-span-12 space-y-6 text-lg font-light leading-relaxed text-aether-white/80 whitespace-pre-line max-w-5xl mx-auto ${stage.contentBox ? 'text-left bg-worn-carbon/30 p-8 md:p-12 rounded-[4px] border border-hextech-green/20' : stage.centerBox ? 'text-center bg-worn-carbon/30 p-8 md:p-12 rounded-[4px] border border-hextech-green/20' : 'text-center'}`}>
                   {stage.content && <p>{stage.content}</p>}
                   
                   {stage.sections && (
