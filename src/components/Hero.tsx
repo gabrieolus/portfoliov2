@@ -1,15 +1,16 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
     <section id="home" className="pt-32 pb-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <div className="lg:col-span-6">
+        <div className="lg:col-span-7">
           <motion.h1 
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-[50px] font-display leading-[55px] tracking-tight mb-12 max-w-3xl"
+            className="text-4xl md:text-[50px] font-display leading-[55px] tracking-tight mb-12 max-w-3xl mt-8 md:mt-0"
           >
             I'm <span className="text-hextech-green">Gabriel Fiore</span>, a Product Designer crafting <span className="text-hextech-green">intuitive and impactful digital experiences.</span>
           </motion.h1>
@@ -24,33 +25,29 @@ export default function Hero() {
           </motion.p>
         </div>
 
-        <motion.div
-          initial={{ y: 24, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="lg:col-span-4 lg:col-start-9 hidden lg:flex"
-        >
-          
-            href="#about"
-            className="group w-full border border-hextech-green/20 rounded-2xl p-8 flex flex-col gap-6 hover:border-hextech-green/50 hover:bg-hextech-green/5 transition-all duration-300 cursor-pointer"
+        <div className="lg:col-span-5 flex justify-center lg:justify-end">
+          <motion.div
+            animate={{ y: [-10, 10, -10] }}
+            transition={{ 
+              duration: 4, 
+              repeat: Infinity, 
+              ease: "easeInOut" 
+            }}
+            className="relative w-full max-w-sm rounded-[24px]"
           >
-            <div className="w-12 h-12 rounded-full border border-hextech-green/30 flex items-center justify-center group-hover:border-hextech-green/60 transition-colors duration-300">
-              <span className="text-hextech-green text-xl">g</span>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <span className="text-xs text-hextech-green/60 uppercase tracking-widest font-sans">About me</span>
-              <p className="text-aether-white font-light leading-relaxed text-sm">
-                Product designer with 4+ years of experience. Based in Brazil, working globally.
-              </p>
-            </div>
-
-            <div className="flex items-center gap-2 text-hextech-green/60 text-sm group-hover:text-hextech-green group-hover:gap-3 transition-all duration-300">
-              <span>Get to know me</span>
-              <span>→</span>
-            </div>
-          </a>
-        </motion.div>
+            <Link to="/about" className="block relative w-full h-full rounded-[24px] overflow-hidden cursor-pointer">
+              {/* Neutral background with green/white gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-hextech-green/20 to-white/20 blur-xl opacity-70 scale-95 transition-opacity hover:opacity-100" />
+              <div className="relative bg-gradient-to-br from-hextech-green/40 to-white/30 rounded-[24px] hextech-border w-full aspect-[4/5] flex items-end justify-center mb-4">
+                <img 
+                  src="https://res.cloudinary.com/dzjegtldc/image/upload/v1779308616/93e1f170-c305-4ebf-9f17-33f9b9afc9e0v2_1_m06yi6.png" 
+                  alt="Gabriel Fiore" 
+                  className="w-full h-full object-cover rounded-[24px]"
+                />
+              </div>
+            </Link>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
