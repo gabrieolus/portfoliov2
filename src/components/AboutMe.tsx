@@ -16,10 +16,9 @@ export default function AboutMe() {
 I'm a Product Designer (UI/UX) passionate about turning complex problems into clean, intuitive experiences. I believe great design lives at the intersection of user needs, business goals, and technical feasibility.
 My background started in graphic design, but SaaS products are where I found my calling. Since 2021, I've been working across fintech and e-commerce, shaping end-to-end experiences from early flows and wireframes to polished, production-ready interfaces.
 I care deeply about the details that make collaboration smooth, especially when it comes to handoff. To me, a design is only as good as the team's ability to build it accurately, so I put a lot of effort into documentation and clear communication with engineering.
-Lately, I've been integrating AI into my design process to support decision-making, speed up exploration, and bring better solutions to the table faster.
-I'm the kind of designer who's not satisfied until everything feels intentional. Not just visually, but structurally. </p>
+Lately, I've been integrating AI into my design process to support decision-making, speed up exploration, and bring better solutions to the table faster. </p>
             <p className="text-lg md:text-xl text-aether-white font-light leading-relaxed">
-              Based on the belief that good design solves real problems, I focus heavily on clarity, usability, and scannability — without compromising aesthetic quality.
+              I'm the kind of designer who's not satisfied until everything feels intentional. Not just visually, but structurally.
             </p>
           </div>
         </motion.div>
