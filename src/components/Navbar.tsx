@@ -41,7 +41,7 @@ export default function Navbar({ onHomeClick }: NavbarProps) {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs uppercase tracking-widest text-aether-white/60 hover:text-hextech-green transition-colors"
+              className="text-xs uppercase tracking-widest text-aether-white hover:text-hextech-green transition-colors"
             >
               {link.name}
             </a>

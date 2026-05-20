@@ -36,7 +36,7 @@ export default function App() {
         ) : (
           <>
             <Hero />
-            <div className="border-t border-hextech-green/10 my-24" />
+            <div className="border-t border-hextech-green/10 my-12" />
             <Projects onProjectClick={handleProjectClick} />
           </>
         )}

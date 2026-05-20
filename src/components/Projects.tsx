@@ -54,7 +54,7 @@ export default function Projects({ onProjectClick }: ProjectsProps) {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-aether-white/40 text-lg md:text-xl max-w-5xl font-light"
+          className="text-aether-white text-lg md:text-xl max-w-5xl font-light"
         >
           Explore my selected projects, showcasing my dedication to innovative and heartfelt design.
         </motion.p>
@@ -75,17 +75,17 @@ export default function Projects({ onProjectClick }: ProjectsProps) {
               <img 
                 src={project.image} 
                 alt={project.title}
-                className="w-full h-full object-cover opacity-60 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
+                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
               />
             </div>
             <div className="space-y-6 md:max-w-[90%]">
-              <div className="uppercase tracking-[4px] text-[10px] font-bold text-hextech-green/60">
+              <div className="uppercase tracking-[4px] text-[10px] font-bold text-hextech-green">
                 {project.category}
               </div>
-              <h3 className="text-xl md:text-2xl font-display font-normal group-hover:text-hextech-green transition-colors">
+              <h3 className="text-xl md:text-2xl font-display font-bold group-hover:text-hextech-green transition-colors">
                 {project.title}
               </h3>
-              <p className="text-aether-white/50 text-base leading-relaxed font-light max-w-5xl">
+              <p className="text-aether-white text-base leading-relaxed font-light max-w-5xl">
                 {project.description}
               </p>
             </div>

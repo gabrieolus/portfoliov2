@@ -290,7 +290,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.1 }}
-          className="text-lg md:text-xl text-aether-white/60 md:max-w-[90%] mx-auto font-light leading-relaxed"
+          className="text-lg md:text-xl text-aether-white md:max-w-[90%] mx-auto font-light leading-relaxed"
         >
           {project.description}
         </motion.p>
@@ -311,7 +311,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
               transition={{ delay: 0.2 + i * 0.1 }}
               className="glass-surface p-8"
             >
-              <div className="text-[10px] uppercase tracking-[4px] text-hextech-green mb-4 opacity-60">
+              <div className="text-[10px] uppercase tracking-[4px] text-hextech-green mb-4">
                 {item.label}
               </div>
               <div className="text-xl md:text-2xl font-display">
@@ -339,7 +339,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
       </section>
 
       {/* Stages Section */}
-      <section className="space-y-24 mb-32 text-aether-white/80">
+      <section className="space-y-24 mb-32 text-aether-white">
         {/* Gallery Section */}
         {project.gallery && (
           <div className="grid grid-cols-1 md:grid-cols-6 gap-8 my-20">
@@ -400,7 +400,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
               className="space-y-12"
             >
               <div className="space-y-4 text-center">
-                <span className="text-[10px] font-mono text-hextech-green/40 tracking-[4px]">{stageLabel}</span>
+                <span className="text-[10px] font-mono text-hextech-green tracking-[4px]">{stageLabel}</span>
                 <h2 className="text-4xl md:text-6xl font-display text-aether-white uppercase tracking-tighter max-w-7xl mx-auto">{displayTitle}</h2>
               </div>
 
@@ -422,7 +422,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
               )}
               
               <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start text-center">
-                <div className={`md:col-span-12 space-y-6 text-lg font-light leading-relaxed text-aether-white/80 whitespace-pre-line max-w-7xl mx-auto ${stage.contentBox ? 'text-left bg-worn-carbon/30 p-8 md:p-12 rounded-[4px] border border-hextech-green/20' : stage.centerBox ? 'text-center bg-worn-carbon/30 p-8 md:p-12 rounded-[4px] border border-hextech-green/20' : 'text-center'}`}>
+                <div className={`md:col-span-12 space-y-6 text-lg font-light leading-relaxed text-aether-white whitespace-pre-line max-w-7xl mx-auto ${stage.contentBox ? 'text-left bg-worn-carbon/30 p-8 md:p-12 rounded-[4px] border border-hextech-green' : stage.centerBox ? 'text-center bg-worn-carbon/30 p-8 md:p-12 rounded-[4px] border border-hextech-green' : 'text-center'}`}>
                   {stage.content && <p>{stage.content}</p>}
                   
                   {stage.sections && (
@@ -434,7 +434,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                             {section.items.map((item: any, i: number) => (
                               <div key={i} className="space-y-1">
                                 <div className="font-display text-aether-white text-lg leading-tight">{item.label}</div>
-                                <div className="text-aether-white/50 text-base font-light leading-relaxed">{item.text}</div>
+                                <div className="text-aether-white text-base font-light leading-relaxed">{item.text}</div>
                               </div>
                             ))}
                           </div>
@@ -449,15 +449,15 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                       <div className="space-y-8">
                         <div className="bg-worn-carbon/30 p-6 md:p-8 rounded-[4px] border border-hextech-green/10 space-y-6 h-full flex flex-col">
                           <div className="space-y-4 flex-grow">
-                            <h3 className="text-xl font-display text-aether-white/60 uppercase tracking-widest">Before</h3>
-                            <p className="text-base text-aether-white/90 font-light leading-relaxed">
+                            <h3 className="text-xl font-display text-aether-white uppercase tracking-widest">Before</h3>
+                            <p className="text-base text-aether-white font-light leading-relaxed">
                               {stage.comparison.before.header}
                             </p>
                             <div className="space-y-4 pt-4">
                               {stage.comparison.before.points.map((item: any, i: number) => (
                                 <div key={i} className="space-y-1">
-                                  <div className="font-display text-aether-white/80 text-sm">{item.label}</div>
-                                  <div className="text-aether-white/40 text-[13px] font-light leading-relaxed">{item.text}</div>
+                                  <div className="font-display text-aether-white text-sm">{item.label}</div>
+                                  <div className="text-aether-white text-[13px] font-light leading-relaxed">{item.text}</div>
                                 </div>
                               ))}
                             </div>
@@ -479,8 +479,8 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                             <div className="space-y-4 pt-4">
                               {stage.comparison.after.points.map((item: any, i: number) => (
                                 <div key={i} className="space-y-1">
-                                  <div className="font-display text-hextech-green/80 text-sm">{item.label}</div>
-                                  <div className="text-aether-white/60 text-[13px] font-light leading-relaxed">{item.text}</div>
+                                  <div className="font-display text-hextech-green text-sm">{item.label}</div>
+                                  <div className="text-aether-white text-[13px] font-light leading-relaxed">{item.text}</div>
                                 </div>
                               ))}
                             </div>
@@ -502,7 +502,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                               {sol.points.map((item: any, i: number) => (
                                 <div key={i} className="space-y-2">
                                   <div className="font-display text-hextech-green text-lg tracking-wide">{item.label}</div>
-                                  <div className="text-aether-white/60 text-[15px] font-light leading-relaxed">{item.text}</div>
+                                  <div className="text-aether-white text-[15px] font-light leading-relaxed">{item.text}</div>
                                 </div>
                               ))}
                             </div>
@@ -635,10 +635,10 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                   onClick={() => onProjectClick(p.title)}
                 >
                   <div className="aspect-video bg-worn-carbon rounded-[4px] hextech-border mb-6 overflow-hidden">
-                    <img src={p.image} alt={p.title} className="w-full h-full object-cover opacity-60 transition-all group-hover:opacity-100 group-hover:scale-105" />
+                    <img src={p.image} alt={p.title} className="w-full h-full object-cover transition-all group-hover:scale-105" />
                   </div>
                   <h3 className="text-xl font-display mb-2 group-hover:text-hextech-green transition-colors">{p.title}</h3>
-                  <p className="text-aether-white/40 font-light max-w-3xl">{p.description}</p>
+                  <p className="text-aether-white font-light max-w-3xl">{p.description}</p>
                 </div>
              ))}
           </div>
