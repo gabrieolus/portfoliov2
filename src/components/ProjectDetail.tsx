@@ -98,6 +98,10 @@ const PROJECT_DATA: Record<string, any> = {
       {
         title: 'Research and Insights',
         subtitle: 'PROBLEM & GOAL',
+        topImagesGrid: [
+          'https://res.cloudinary.com/dzjegtldc/image/upload/v1779299591/annotations_uccj4c.png',
+          'https://res.cloudinary.com/dzjegtldc/image/upload/v1779299840/Competitive_Analysis_xdmxnt.png'
+        ],
         sections: [
           {
             title: 'Problem:',
@@ -119,9 +123,13 @@ const PROJECT_DATA: Record<string, any> = {
         ]
       },
       {
-        title: 'Wireframe',
+        title: 'Wireframes',
         subtitle: 'IDEATION',
         content: 'I created low-fidelity wireframes to explore key flows and functionality. Early prototypes helped refine interactions, and as the design progressed, I increased fidelity to shape the final experience.',
+        preImageGrid: [
+          'https://res.cloudinary.com/dzjegtldc/image/upload/v1779301828/v1_wireframe_ldtzln.png',
+          'https://res.cloudinary.com/dzjegtldc/image/upload/v1779301498/v2_wireframe_lenbdd.png'
+        ],
         image: 'https://i.postimg.cc/xfCRfz4K/wireframe.png?dl=1',
         imageSize: 'small'
       },
@@ -395,6 +403,23 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                 <span className="text-[10px] font-mono text-hextech-green/40 tracking-[4px]">{stageLabel}</span>
                 <h2 className="text-4xl md:text-6xl font-display text-aether-white uppercase tracking-tighter max-w-7xl mx-auto">{displayTitle}</h2>
               </div>
+
+              {stage.topImagesGrid && (
+                <div className="flex flex-col gap-8 mt-8 mb-12 w-3/4 mx-auto">
+                  {stage.topImagesGrid.map((imgUrl: string, idx: number) => (
+                    <motion.div 
+                      key={idx}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: idx * 0.1 }}
+                      className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon shadow-xl shadow-black/30"
+                    >
+                      <img src={imgUrl} alt={`${stage.title} detail ${idx + 1}`} className="w-full h-auto" />
+                    </motion.div>
+                  ))}
+                </div>
+              )}
               
               <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start text-center">
                 <div className={`md:col-span-12 space-y-6 text-lg font-light leading-relaxed text-aether-white/80 whitespace-pre-line max-w-7xl mx-auto ${stage.contentBox ? 'text-left bg-worn-carbon/30 p-8 md:p-12 rounded-[4px] border border-hextech-green/20' : stage.centerBox ? 'text-center bg-worn-carbon/30 p-8 md:p-12 rounded-[4px] border border-hextech-green/20' : 'text-center'}`}>
@@ -496,6 +521,23 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                   )}
                 </div>
               </div>
+
+              {stage.preImageGrid && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16 w-full md:w-3/4 mx-auto">
+                  {stage.preImageGrid.map((imgUrl: string, idx: number) => (
+                    <motion.div 
+                      key={`preimg-${idx}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: idx * 0.1 }}
+                      className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon shadow-xl shadow-black/30"
+                    >
+                      <img src={imgUrl} alt={`${stage.title} detail ${idx + 1}`} className="w-full h-auto" />
+                    </motion.div>
+                  ))}
+                </div>
+              )}
 
               {stage.image && (
                 <div className={`w-full mt-16 ${stage.imageSize === 'small' ? 'flex justify-center' : ''}`}>
