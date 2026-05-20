@@ -115,9 +115,10 @@ const PROJECT_DATA: Record<string, any> = {
           {
             title: 'Goal:',
             items: [
-              { label: 'Cognitive Ease:', text: 'Implementing iconography to explain complex effects.' },
+              { label: 'Cognitive Ease:', text: 'Helping users understand how a product will affect them without requiring prior cannabis knowledge.' },
               { label: 'Data Scannability:', text: 'Structuring data to be scannable for both novice and expert users.' },
-              { label: 'Purchasing Rigidity:', text: 'Adding a dynamic weight selector to facilitate larger orders.' }
+              { label: 'Purchasing Rigidity:', text: 'Adding a dynamic weight selector to facilitate larger orders.' },
+              { label: 'Sensory Clarity:', text: 'Surfacing flavor and terpene profiles in a scannable, human-readable format.' }
             ]
           }
         ]
@@ -433,7 +434,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                           <div className="space-y-6">
                             {section.items.map((item: any, i: number) => (
                               <div key={i} className="space-y-1">
-                                <div className="font-display text-aether-white text-lg leading-tight">{item.label}</div>
+                                <div className="font-display text-aether-white text-lg leading-tight font-semibold">{item.label}</div>
                                 <div className="text-aether-white text-base font-light leading-relaxed">{item.text}</div>
                               </div>
                             ))}
@@ -456,7 +457,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                             <div className="space-y-4 pt-4">
                               {stage.comparison.before.points.map((item: any, i: number) => (
                                 <div key={i} className="space-y-1">
-                                  <div className="font-display text-aether-white text-sm">{item.label}</div>
+                                  <div className="font-display text-aether-white text-sm font-semibold">{item.label}</div>
                                   <div className="text-aether-white text-[13px] font-light leading-relaxed">{item.text}</div>
                                 </div>
                               ))}
@@ -479,7 +480,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                             <div className="space-y-4 pt-4">
                               {stage.comparison.after.points.map((item: any, i: number) => (
                                 <div key={i} className="space-y-1">
-                                  <div className="font-display text-hextech-green text-sm">{item.label}</div>
+                                  <div className="font-display text-hextech-green text-sm font-semibold">{item.label}</div>
                                   <div className="text-aether-white text-[13px] font-light leading-relaxed">{item.text}</div>
                                 </div>
                               ))}
@@ -501,7 +502,7 @@ export default function ProjectDetail({ projectId, onBack, onProjectClick }: Pro
                             <div className="space-y-8">
                               {sol.points.map((item: any, i: number) => (
                                 <div key={i} className="space-y-2">
-                                  <div className="font-display text-hextech-green text-lg tracking-wide">{item.label}</div>
+                                  <div className="font-display text-hextech-green text-lg tracking-wide font-semibold">{item.label}</div>
                                   <div className="text-aether-white text-[15px] font-light leading-relaxed">{item.text}</div>
                                 </div>
                               ))}
