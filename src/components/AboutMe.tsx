@@ -1,11 +1,18 @@
 import { motion } from 'motion/react';
-import { Diamond, Mail } from 'lucide-react';
+import { Diamond, Mail, ArrowLeft } from 'lucide-react';
 import { BehanceIcon, LinkedInIcon } from './BrandIcons';
+import { Link } from 'react-router-dom';
 
 export default function AboutMe() {
   return (
     <section id="about" className="pt-24 pb-12">
       <div className="max-w-7xl mx-auto">
+        <div className="mb-8">
+          <Link to="/" className="group flex flex-row items-center gap-3 text-sm font-display uppercase tracking-[4px] text-hextech-green hover:opacity-80 transition-opacity w-fit">
+            <ArrowLeft size={16} className="transition-transform group-hover:-translate-x-1" />
+            Back
+          </Link>
+        </div>
         <motion.div
 
           initial={{ y: 20, opacity: 0 }}
