@@ -21,7 +21,7 @@ const projects = [
     slug: 'kore-builders',
     description: 'A specialized platform for the private capital market, designed to empower developers and founders with robust building tools.',
     image: 'https://i.postimg.cc/yYqPL7zD/2.gif',
-    category: 'UI/UX Design / Platform'
+    category: 'UI/UX Design / Branding'
   },
   {
     title: 'Kore Rebranding',

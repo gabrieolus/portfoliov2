@@ -28,20 +28,30 @@ export default function Navbar() {
             aria-label="Gabriel Fiore"
           />
         </Link>
-        <div className="flex gap-10">
+        <div className="flex gap-10 items-center">
           {[
-            { name: 'LinkedIn', href: 'https://www.linkedin.com/in/gabrieolus/' },
-            { name: 'Behance', href: 'https://behance.net/gabrieolus' },
+            { name: 'LinkedIn', href: 'https://www.linkedin.com/in/gabrieolus/', external: true },
+            { name: 'About', href: '/about', external: false },
           ].map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs uppercase tracking-widest text-aether-white hover:text-hextech-green transition-colors"
-            >
-              {link.name}
-            </a>
+            link.external ? (
+              <a 
+                key={link.name} 
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs uppercase tracking-widest text-aether-white hover:text-hextech-green transition-colors"
+              >
+                {link.name}
+              </a>
+            ) : (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="text-xs uppercase tracking-widest text-aether-white hover:text-hextech-green transition-colors"
+              >
+                {link.name}
+              </Link>
+            )
           ))}
         </div>
       </div>
