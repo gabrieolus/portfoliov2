@@ -22,13 +22,13 @@ const PROJECT_DATA: Record<string, any> = {
     role: 'UX/UI Designer',
     industry: 'E-commerce',
     duration: '2 months',
-    image: 'https://i.postimg.cc/KvSm89KT/cover-campaign-builder.png',
+    image: '/case-assets/KvSm89KT-cover-campaign-builder.png',
     stages: [
       {
         title: 'Overview',
         subtitle: 'PROJECT OVERVIEW',
         content: 'This project focuses on the campaign management section of Blaze ECOM, a cannabis e-commerce admin platform. Store owners needed a way to create, manage, and monitor marketing campaigns — from welcome sequences to abandoned cart flows — directly from their dashboard.\n\nMy role covered the full design process: from interpreting the product brief and mapping user flows, to building the final interface and preparing assets for handoff. The research and problem discovery phases were led by the product team; I was brought in from the briefing stage, responsible for translating those insights into a functional and intuitive experience.',
-        image: 'https://i.postimg.cc/26sHR9kL/Mac-Book-Pro-14Incv2.png'
+        image: '/case-assets/26sHR9kL-Mac-Book-Pro-14Incv2.png'
       },
       {
         title: 'Context & Research',
@@ -52,11 +52,11 @@ const PROJECT_DATA: Record<string, any> = {
         subtitle: 'CORE PRIORITIES',
         centerBox: true,
         content: '• Reducing unnecessary steps\n• Making the flow adaptable instead of linear\n• Keeping key decisions visible throughout the process',
-        image: 'https://i.postimg.cc/NgcL4kxd/web-mockup-V1-frontv2123.jpg?dl=1',
+        image: '/case-assets/NgcL4kxd-web-mockup-V1-frontv2123.jpg',
         imagesGrid: [
-          'https://i.postimg.cc/v8JPPttN/1.jpg',
-          'https://i.postimg.cc/HWqSS9tH/2.jpg',
-          'https://i.postimg.cc/8kMdCQh7/3.jpg'
+          '/case-assets/v8JPPttN-1.jpg',
+          '/case-assets/HWqSS9tH-2.jpg',
+          '/case-assets/8kMdCQh7-3.jpg'
         ]
       },
       {
@@ -78,7 +78,7 @@ const PROJECT_DATA: Record<string, any> = {
             These were the exact problems the brief pointed to, and they are the right indicators to know whether the design actually solved them.
           </span>
         ),
-        image: 'https://i.postimg.cc/KjGYFMPD/outcome.png'
+        image: '/case-assets/KjGYFMPD-outcome.png'
       },
       {
         title: 'Learnings',
@@ -95,7 +95,7 @@ const PROJECT_DATA: Record<string, any> = {
     role: 'UX/UI Designer',
     industry: 'E-commerce',
     duration: '1 month',
-    image: 'https://i.postimg.cc/gcgYb11L/mainpage.jpg',
+    image: '/case-assets/gcgYb11L-mainpage.jpg',
     stages: [
       {
         title: 'Where the Experience Breaks',
@@ -138,7 +138,7 @@ const PROJECT_DATA: Record<string, any> = {
           'https://res.cloudinary.com/dzjegtldc/image/upload/v1779301828/v1_wireframe_ldtzln.png',
           'https://res.cloudinary.com/dzjegtldc/image/upload/v1779301498/v2_wireframe_lenbdd.png'
         ],
-        image: 'https://i.postimg.cc/xfCRfz4K/wireframe.png?dl=1',
+        image: '/case-assets/xfCRfz4K-wireframe.png',
         imageSize: 'small'
       },
       {
@@ -147,7 +147,7 @@ const PROJECT_DATA: Record<string, any> = {
         comparison: {
           before: {
             header: 'The original interface acted more as a catalog than a decision-making tool.',
-            image: 'https://i.postimg.cc/mbM4dPw9/before.png?dl=1',
+            image: '/case-assets/mbM4dPw9-before.png',
             points: [
               { label: 'Information Silos:', text: 'Critical data like effects and flavor profiles were missing, forcing users to search elsewhere.' },
               { label: 'Static Purchasing:', text: 'The interface lacked flexibility for users wanting to buy in bulk or select different weights, leading to cart abandonment.' },
@@ -157,7 +157,7 @@ const PROJECT_DATA: Record<string, any> = {
           },
           after: {
             header: 'The redesigned interface empowers the user by transforming complex data into intuitive, actionable insights.',
-            image: 'https://i.postimg.cc/p2nWgG2m/GIF1.gif?dl=1',
+            image: '/case-assets/p2nWgG2m-GIF1.gif',
             points: [
               { label: 'Contextual Guidance:', text: 'Integrated Effect Profile icons (Calming, Balanced, Heady) allow users to instantly align the product with their desired experience.' },
               { label: 'Dynamic Flexibility:', text: 'A new Available Weights selector streamlines the purchase flow, enabling easy selection from 1/8 oz to 1 oz without friction.' },
@@ -172,7 +172,7 @@ const PROJECT_DATA: Record<string, any> = {
         subtitle: 'SYSTEM ARCHITECTURE',
         solutions: [
           {
-            image: 'https://i.postimg.cc/SShnVFWq/designsolutions.png?dl=1',
+            image: '/case-assets/SShnVFWq-designsolutions.png',
             points: [
               { label: 'Contextual Guidance:', text: 'Integrated Effect Profile icons (Calming, Balanced, Heady) allow users to instantly align the product with their desired experience.' },
               { label: 'Dynamic Flexibility:', text: 'A new Available Weights selector streamlines the purchase flow, enabling easy selection from 1/8 oz to 1 oz without friction.' },
@@ -181,7 +181,7 @@ const PROJECT_DATA: Record<string, any> = {
             ]
           },
           {
-            image: 'https://i.postimg.cc/KG21QSn1/designsolutions2.png?dl=1',
+            image: '/case-assets/KG21QSn1-designsolutions2.png',
             fullWidth: true
           }
         ]
@@ -195,10 +195,10 @@ const PROJECT_DATA: Record<string, any> = {
     role: 'UI/UX Designer',
     industry: 'Fintech / Infrastructure',
     duration: '1 month',
-    image: 'https://i.postimg.cc/yYqPL7zD/2.gif',
+    image: '/case-assets/yYqPL7zD-2.gif',
     gallery: [
-      'https://i.postimg.cc/5JRZzvCx/v2.png',
-      'https://i.postimg.cc/nZ9NGz4M/v3.png'
+      '/case-assets/5JRZzvCx-v2.png',
+      '/case-assets/nZ9NGz4M-v3.png'
     ],
     stages: []
   },
@@ -209,14 +209,14 @@ const PROJECT_DATA: Record<string, any> = {
     role: 'UI/UX Designer / Visual Designer',
     industry: 'Fintech',
     duration: '6 months',
-    image: 'https://i.postimg.cc/rsvRT9JX/2.gif',
+    image: '/case-assets/rsvRT9JX-2.gif',
     gallery: [
-      'https://i.postimg.cc/3xjzjvXX/6.jpg',
-      'https://i.postimg.cc/ht8N8dL0/7.jpg',
-      'https://i.postimg.cc/zGw4wgCj/9.jpg',
-      'https://i.postimg.cc/tg4yY5Kk/11.gif',
-      'https://i.postimg.cc/432GtcZN/13.gif',
-      'https://i.postimg.cc/G2BCjphb/14.gif'
+      '/case-assets/3xjzjvXX-6.jpg',
+      '/case-assets/ht8N8dL0-7.jpg',
+      '/case-assets/zGw4wgCj-9.jpg',
+      '/case-assets/tg4yY5Kk-11.gif',
+      '/case-assets/432GtcZN-13.gif',
+      '/case-assets/G2BCjphb-14.gif'
     ],
     stages: [
       {
@@ -233,20 +233,20 @@ const PROJECT_DATA: Record<string, any> = {
     role: 'UI/UX Designer',
     industry: 'Fintech',
     duration: '3 months',
-    image: 'https://i.postimg.cc/prNyxPbX/f4ac37211275387.png',
+    image: '/case-assets/prNyxPbX-f4ac37211275387.png',
     gallery: [
-      'https://i.postimg.cc/432GtcZN/13.gif',
-      'https://i.postimg.cc/G2BCjphb/14.gif',
-      'https://i.postimg.cc/jjCx8Tsz/1.gif',
-      'https://i.postimg.cc/RhxvVnwn/10.gif',
-      'https://i.postimg.cc/s28VqLxF/11.jpg',
-      'https://i.postimg.cc/Kjhmvgt1/12.gif',
-      'https://i.postimg.cc/0N38F4Qd/2.jpg',
-      'https://i.postimg.cc/FRL94xkm/5.gif',
-      'https://i.postimg.cc/tgfXwcTz/6.jpg',
-      'https://i.postimg.cc/zfMJ6QBj/7.jpg',
-      'https://i.postimg.cc/8561SbfF/8.gif',
-      'https://i.postimg.cc/43MJq0dM/9.jpg'
+      '/case-assets/432GtcZN-13.gif',
+      '/case-assets/G2BCjphb-14.gif',
+      '/case-assets/jjCx8Tsz-1.gif',
+      '/case-assets/RhxvVnwn-10.gif',
+      '/case-assets/s28VqLxF-11.jpg',
+      '/case-assets/Kjhmvgt1-12.gif',
+      '/case-assets/0N38F4Qd-2.jpg',
+      '/case-assets/FRL94xkm-5.gif',
+      '/case-assets/tgfXwcTz-6.jpg',
+      '/case-assets/zfMJ6QBj-7.jpg',
+      '/case-assets/8561SbfF-8.gif',
+      '/case-assets/43MJq0dM-9.jpg'
     ],
     stages: [
       {
