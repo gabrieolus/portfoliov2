@@ -54,6 +54,9 @@ export default function AboutMe() {
               <img 
                 src="https://res.cloudinary.com/dzjegtldc/image/upload/v1779416579/about-image_vzf3hv.png" 
                 alt="About Gabriel Fiore" 
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
                 className="relative z-10 w-full h-auto object-contain drop-shadow-2xl rounded-[24px]" 
               />
             </motion.div>

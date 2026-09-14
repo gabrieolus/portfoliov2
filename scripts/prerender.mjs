@@ -89,10 +89,11 @@ function createHead(seo) {
 for (const route of routes) {
   const {appHtml, seo} = render(route);
   const imagePreloads = appHtml.match(/^(?:<link rel="preload" as="image"[^>]*\/>)+/)?.[0] ?? '';
+  const prioritizedImagePreload = imagePreloads.match(/<link rel="preload" as="image"[^>]*\/>/)?.[0] ?? '';
   const hydratableAppHtml = appHtml.slice(imagePreloads.length);
   const html = template
     .replace(/<!-- SEO:START -->[\s\S]*?<!-- SEO:END -->/, createHead(seo))
-    .replace('</head>', `${imagePreloads}\n  </head>`)
+    .replace('</head>', `${prioritizedImagePreload}\n  </head>`)
     .replace('<div id="root"></div>', `<div id="root">${hydratableAppHtml}</div>`);
   const outputDir = route === '/' ? distDir : path.join(distDir, route.slice(1));
 
