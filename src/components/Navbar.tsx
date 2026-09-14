@@ -16,11 +16,11 @@ export default function Navbar() {
           <div 
             className="w-8 h-8 bg-hextech-green"
             style={{
-              maskImage: 'url(https://i.postimg.cc/DWm552Z8/gfiorelogov2.png)',
+              maskImage: 'url(/case-assets/DWm552Z8-gfiorelogov2.png)',
               maskSize: 'contain',
               maskRepeat: 'no-repeat',
               maskPosition: 'center',
-              WebkitMaskImage: 'url(https://i.postimg.cc/DWm552Z8/gfiorelogov2.png)',
+              WebkitMaskImage: 'url(/case-assets/DWm552Z8-gfiorelogov2.png)',
               WebkitMaskSize: 'contain',
               WebkitMaskRepeat: 'no-repeat',
               WebkitMaskPosition: 'center',

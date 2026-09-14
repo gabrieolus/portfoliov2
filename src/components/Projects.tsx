@@ -6,35 +6,35 @@ const projects = [
     title: 'Campaign Builder for Blaze Ecom',
     slug: 'blaze-campaign-builder',
     description: 'This project focuses on the campaign management section of a cannabis e-commerce dashboard. It helps store owners create and track marketing campaigns in one place.',
-    image: 'https://i.postimg.cc/KvSm89KT/cover-campaign-builder.png',
+    image: '/case-assets/KvSm89KT-cover-campaign-builder.png',
     category: 'Product Design'
   },
   {
     title: 'Blaze Product Page Redesign',
     slug: 'blaze-product-page-redesign',
     description: 'The product page created confusion, making it difficult for users to quickly understand the offerings. A new structure made it easy to find products.',
-    image: 'https://i.postimg.cc/13PSSfgt/mainpageblaze.png',
+    image: '/case-assets/13PSSfgt-mainpageblaze.png',
     category: 'UI/UX Design'
   },
   {
     title: 'Kore.Builders',
     slug: 'kore-builders',
     description: 'A specialized platform for the private capital market, designed to empower developers and founders with robust building tools.',
-    image: 'https://i.postimg.cc/yYqPL7zD/2.gif',
+    image: '/case-assets/yYqPL7zD-2.gif',
     category: 'UI/UX Design / Branding'
   },
   {
     title: 'Kore Rebranding',
     slug: 'kore-rebranding',
     description: 'This project showcases the rebranding and logo redesign for Kore, a Canadian fintech offering an all-in-one platform for the private capital market.',
-    image: 'https://i.postimg.cc/rsvRT9JX/2.gif',
+    image: '/case-assets/rsvRT9JX-2.gif',
     category: 'UI/UX Design / Branding'
   },
   {
     title: 'Kore - Website',
     slug: 'kore-website',
     description: 'A comprehensive design and illustration project for Kore\'s digital presence, including motion graphics and website layout.',
-    image: 'https://i.postimg.cc/prNyxPbX/f4ac37211275387.png', 
+    image: '/case-assets/prNyxPbX-f4ac37211275387.png',
     category: 'Web Design'
   }
 ];
