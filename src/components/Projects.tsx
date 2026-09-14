@@ -73,11 +73,13 @@ export default function Projects() {
             className="group block"
           >
             <Link to={`/cases/${project.slug}`} className="block block-inherit h-full">
-              <div className="aspect-[4/3] rounded-[4px] overflow-hidden mb-8 bg-worn-carbon hextech-border">
+              <div className="rounded-[4px] overflow-hidden mb-8 hextech-border">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-90"
+                  loading="lazy"
+                  decoding="async"
+                  className="block w-full h-auto transition-opacity duration-300 group-hover:opacity-90"
                 />
               </div>
               <div className="space-y-6 md:max-w-[90%]">

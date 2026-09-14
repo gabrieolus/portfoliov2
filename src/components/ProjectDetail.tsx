@@ -346,6 +346,9 @@ export default function ProjectDetail() {
           <img 
             src={project.image} 
             alt={project.title} 
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-auto transition-transform duration-700 group-hover:scale-102"
           />
         </motion.div>
@@ -391,6 +394,8 @@ export default function ProjectDetail() {
                   <img 
                     src={img} 
                     alt={`${project.title} Gallery ${index + 1}`} 
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-auto"
                   />
                 </motion.div>
@@ -428,7 +433,7 @@ export default function ProjectDetail() {
                       transition={{ delay: idx * 0.1 }}
                       className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon shadow-xl shadow-black/30"
                     >
-                      <img src={imgUrl} alt={`${stage.title} detail ${idx + 1}`} className="w-full h-auto" />
+                      <img src={imgUrl} alt={`${stage.title} detail ${idx + 1}`} loading="lazy" decoding="async" className="w-full h-auto" />
                     </motion.div>
                   ))}
                 </div>
@@ -476,7 +481,7 @@ export default function ProjectDetail() {
                             </div>
                           </div>
                           <div className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon mt-8 p-8">
-                            <img src={stage.comparison.before.image} alt="Before" className="w-full h-auto" />
+                            <img src={stage.comparison.before.image} alt="Before" loading="lazy" decoding="async" className="w-full h-auto" />
                           </div>
                         </div>
                       </div>
@@ -499,7 +504,7 @@ export default function ProjectDetail() {
                             </div>
                           </div>
                           <div className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon mt-8 p-8">
-                            <img src={stage.comparison.after.image} alt="After" className="w-full h-auto" />
+                            <img src={stage.comparison.after.image} alt="After" loading="lazy" decoding="async" className="w-full h-auto" />
                           </div>
                         </div>
                       </div>
@@ -526,7 +531,7 @@ export default function ProjectDetail() {
                             viewport={{ once: true }}
                             className={`rounded-[4px] overflow-hidden bg-worn-carbon shadow-2xl ${sol.fullWidth ? 'w-full' : ''}`}
                           >
-                            <img src={sol.image} alt="Design Solution" className="w-full h-auto" />
+                            <img src={sol.image} alt="Design Solution" loading="lazy" decoding="async" className="w-full h-auto" />
                           </motion.div>
                         </div>
                       ))}
@@ -546,7 +551,7 @@ export default function ProjectDetail() {
                       transition={{ delay: idx * 0.1 }}
                       className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon shadow-xl shadow-black/30"
                     >
-                      <img src={imgUrl} alt={`${stage.title} detail ${idx + 1}`} className="w-full h-auto" />
+                      <img src={imgUrl} alt={`${stage.title} detail ${idx + 1}`} loading="lazy" decoding="async" className="w-full h-auto" />
                     </motion.div>
                   ))}
                 </div>
@@ -560,7 +565,7 @@ export default function ProjectDetail() {
                     viewport={{ once: true }}
                     className={`rounded-[4px] overflow-hidden hextech-border bg-worn-carbon shadow-2xl shadow-black/50 ${stage.imageSize === 'small' ? 'md:w-3/4 w-full mx-auto' : 'w-full'}`}
                   >
-                    <img src={stage.image} alt={stage.title} className="w-full h-auto" />
+                    <img src={stage.image} alt={stage.title} loading="lazy" decoding="async" className="w-full h-auto" />
                   </motion.div>
                 </div>
               )}
@@ -573,7 +578,7 @@ export default function ProjectDetail() {
                     viewport={{ once: true }}
                     className={`rounded-[4px] overflow-hidden hextech-border bg-worn-carbon shadow-2xl shadow-black/50 ${stage.videoSize === 'small' ? 'md:w-3/4 w-full mx-auto' : 'w-full'}`}
                   >
-                    <video src={stage.video} autoPlay loop muted playsInline className="w-full h-auto" />
+                    <video src={stage.video} autoPlay loop muted playsInline preload="metadata" className="w-full h-auto" />
                   </motion.div>
                 </div>
               )}
@@ -589,7 +594,7 @@ export default function ProjectDetail() {
                       transition={{ delay: idx * 0.1 }}
                       className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon shadow-xl shadow-black/30"
                     >
-                      <img src={imgUrl} alt={`${stage.title} detail ${idx + 1}`} className="w-full h-auto" />
+                      <img src={imgUrl} alt={`${stage.title} detail ${idx + 1}`} loading="lazy" decoding="async" className="w-full h-auto" />
                     </motion.div>
                   ))}
                 </div>
@@ -606,7 +611,7 @@ export default function ProjectDetail() {
                       transition={{ delay: idx * 0.1 }}
                       className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon shadow-xl shadow-black/30"
                     >
-                      <img src={imgUrl} alt={`${stage.title} detail ${idx + 1}`} className="w-full h-auto" />
+                      <img src={imgUrl} alt={`${stage.title} detail ${idx + 1}`} loading="lazy" decoding="async" className="w-full h-auto" />
                     </motion.div>
                   ))}
                 </div>
@@ -620,7 +625,7 @@ export default function ProjectDetail() {
                     viewport={{ once: true }}
                     className="rounded-[4px] overflow-hidden hextech-border bg-worn-carbon shadow-2xl shadow-black/50 w-full"
                   >
-                    <img src={stage.afterGridImage} alt={stage.title} className="w-full h-auto" />
+                    <img src={stage.afterGridImage} alt={stage.title} loading="lazy" decoding="async" className="w-full h-auto" />
                   </motion.div>
                 </div>
               )}
@@ -648,7 +653,7 @@ export default function ProjectDetail() {
                   className="group block h-full"
                 >
                   <div className="aspect-video bg-worn-carbon rounded-[4px] hextech-border mb-6 overflow-hidden">
-                    <img src={p.image} alt={p.title} className="w-full h-full object-cover transition-all group-hover:scale-105" />
+                    <img src={p.image} alt={p.title} loading="lazy" decoding="async" className="w-full h-full object-cover transition-all group-hover:scale-105" />
                   </div>
                   <h3 className="text-xl font-display mb-2 group-hover:text-hextech-green transition-colors">{p.title}</h3>
                   <p className="text-aether-white font-light max-w-3xl">{p.description}</p>

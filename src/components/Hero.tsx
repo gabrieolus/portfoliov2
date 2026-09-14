@@ -56,6 +56,9 @@ export default function Hero() {
                 <img 
                   src="https://res.cloudinary.com/dzjegtldc/image/upload/v1779415201/heroimage_yh4k9p.png" 
                   alt="Gabriel Fiore" 
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="w-full max-w-[425px] md:max-w-[552px] h-auto object-contain drop-shadow-2xl"
                 />
               </div>
