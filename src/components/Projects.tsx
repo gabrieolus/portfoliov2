@@ -77,7 +77,7 @@ export default function Projects() {
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                  className="w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-90"
                 />
               </div>
               <div className="space-y-6 md:max-w-[90%]">

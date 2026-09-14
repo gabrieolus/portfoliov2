@@ -3,13 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { BrowserRouter as Router, Routes, Route, ScrollRestoration, Link, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import ProjectDetail from './components/ProjectDetail';
+import Seo from './components/Seo';
 import { useEffect } from 'react';
 
 function ScrollToTop() {
@@ -24,8 +25,9 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <Router>
+    <>
       <ScrollToTop />
+      <Seo />
       <div className="min-h-screen font-sans selection:bg-aura-green selection:text-aura-black">
         <Navbar />
         <main className="max-w-[1720px] mx-auto px-6">
@@ -43,6 +45,6 @@ export default function App() {
         </main>
         <Footer />
       </div>
-    </Router>
+    </>
   );
 }
