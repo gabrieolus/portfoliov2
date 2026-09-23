@@ -12,7 +12,7 @@ export default function Footer() {
             {[
               <a href="https://www.linkedin.com/in/gabrieolus/" target="_blank" rel="noopener noreferrer"><LinkedInIcon width={17} height={17} /></a>,
               <a href="https://behance.net/gabrieolus" target="_blank" rel="noopener noreferrer"><BehanceIcon width={20} height={20} /></a>,
-              <a href="mailto:gafiore11@gmail.com"><Mail width={17} height={17} /></a>,
+              <a href="mailto:gfioreoliveira@gmail.com"><Mail width={17} height={17} /></a>,
             ].map((icon, i) => (
               <div key={i} className="w-11 h-11 rounded-[4px] hextech-border flex items-center justify-center hover:bg-black/5 transition-all">
                 {icon}

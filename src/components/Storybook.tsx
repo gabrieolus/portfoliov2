@@ -198,7 +198,7 @@ export default function Storybook() {
                 <div>
                   <SpecLabel>Project card</SpecLabel>
                   <h3 className="mb-4 text-2xl font-bold">Campaign Builder</h3>
-                  <p className="font-light leading-relaxed text-aether-white/70">A modular workflow designed to make complex campaign setup feel clear and adaptable.</p>
+                  <p className="font-light leading-relaxed text-aether-white/70">A zero-to-one internal platform designed as the sole Product Designer, from information architecture to interaction specifications.</p>
                 </div>
                 <div className="mt-8 flex items-center justify-between border-t border-black/5 pt-5 text-xs font-bold uppercase tracking-[2px]">
                   View case <ArrowUpRight size={16} className="text-hextech-green" />

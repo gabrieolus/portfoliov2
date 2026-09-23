@@ -18,32 +18,40 @@ const PROJECT_DATA: Record<string, any> = {
   'Campaign Builder for Blaze Ecom': {
     title: 'Campaign Builder for Blaze Ecom',
     subtitle: 'Blaze Ecom',
-    description: 'This project focuses on the campaign management section of a cannabis e-commerce dashboard. It helps store owners create and track marketing campaigns in one place.',
-    role: 'UX/UI Designer',
-    industry: 'E-commerce',
+    description: 'A zero-to-one campaign management platform designed for Blaze Ecom, covering information architecture, component architecture, user flows, and interaction specifications.',
+    role: 'Product Designer (sole designer)',
+    industry: 'E-commerce SaaS (cannabis retail)',
     duration: '2 months',
+    details: [
+      { label: 'Role', value: 'Product Designer (sole designer)' },
+      { label: 'Team', value: '1 PM, engineering' },
+      { label: 'Timeline', value: '2 months' },
+      { label: 'Industry', value: 'E-commerce SaaS (cannabis retail)' },
+      { label: 'My scope', value: 'Information architecture, component architecture, user flows, interaction specs, final UI and handoff' },
+      { label: 'Not my scope', value: 'Discovery and research, led by the product team' },
+    ],
     image: '/case-assets/KvSm89KT-cover-campaign-builder.png',
     stages: [
       {
         title: 'Overview',
         subtitle: 'PROJECT OVERVIEW',
-        content: 'This project focuses on the campaign management section of Blaze ECOM, a cannabis e-commerce admin platform. Store owners needed a way to create, manage, and monitor marketing campaigns — from welcome sequences to abandoned cart flows — directly from their dashboard.\n\nMy role covered the full design process: from interpreting the product brief and mapping user flows, to building the final interface and preparing assets for handoff. The research and problem discovery phases were led by the product team; I was brought in from the briefing stage, responsible for translating those insights into a functional and intuitive experience.',
+        content: 'Blaze Ecom is an e-commerce admin platform for cannabis retailers. Store owners had no way to create and manage marketing campaigns — from welcome sequences to abandoned cart flows — inside their dashboard. The Campaign Builder was a new product area, designed from scratch.\n\nI was the only designer on the project, working directly with the PM. The product team ran discovery; I joined at the brief and owned everything from there: information architecture, flows, component architecture, interaction specs, final interface and handoff.',
         image: '/case-assets/26sHR9kL-Mac-Book-Pro-14Incv2.png'
       },
       {
-        title: 'Context & Research',
-        subtitle: 'DISCOVERY',
-        content: "The product team conducted discovery before I joined the project. Based on the brief I received, the main findings were:\n\n• Store owners were spending excessive time creating campaigns due to a rigid, step-by-step flow that required all decisions upfront.\n\n• A significant portion of users abandoned the campaign builder before publishing, often because they couldn't easily revisit earlier choices.\n\n• The existing interface treated all campaign types the same way, even though recurring and one-time campaigns have very different configuration needs.\n\nMy starting point was this briefing. From there, I ran a competitive analysis of tools like Klaviyo, Mailchimp, and ActiveCampaign to understand common patterns and identify where I could take a different approach."
+        title: 'Context',
+        subtitle: 'PRODUCT CONTEXT',
+        content: "Before this tool, store owners had no campaign tool at all. The brief pointed to three needs:\n\n• Campaign creation had to be fast. Store owners run their shop day to day and can't spend long configuring campaigns.\n\n• Users needed to revisit and change earlier decisions without losing progress.\n\n• Recurring and one-time campaigns have very different configuration needs and couldn't be treated the same way.\n\nFrom the brief, I ran a competitive analysis of Klaviyo, Mailchimp and ActiveCampaign to map common patterns and find where a different approach made sense."
       },
       {
         title: 'The challenge',
         subtitle: 'PROBLEM STATEMENT',
-        content: 'The core challenge was reducing friction in the campaign creation process without taking away flexibility. Store owners needed to move fast but the existing flow forced every decision upfront, in a fixed order, with no easy way to go back. The goal was to redesign this experience so users could build campaigns progressively, at their own pace.'
+        content: 'Design a campaign builder that lets store owners move fast without taking away flexibility: no forced order, no decisions required upfront, and no lost progress when going back.'
       },
       {
         title: 'The idea',
         subtitle: 'CONCEPTUAL APPROACH',
-        content: 'The idea came from questioning the default assumption of campaign builders: that users need to be guided step by step. Instead, I explored what it would look like to treat a campaign as a set of independent modules, each configurable on its own, in any order, giving users structure without forcing a rigid sequence.',
+        content: 'Most campaign builders assume users need to be guided step by step. I questioned that assumption and designed the campaign as a set of independent modules, each configurable on its own and in any order. Users get structure without a rigid sequence.',
         image: 'https://res.cloudinary.com/dzjegtldc/image/upload/v1779236310/linearvsmodular_pflcnp.png',
         imageSize: 'small'
       },
@@ -51,7 +59,7 @@ const PROJECT_DATA: Record<string, any> = {
         title: 'Main focus',
         subtitle: 'CORE PRIORITIES',
         centerBox: true,
-        content: '• Reducing unnecessary steps\n• Making the flow adaptable instead of linear\n• Keeping key decisions visible throughout the process',
+        content: '• Remove unnecessary steps\n• Make the flow adaptable instead of linear\n• Keep key decisions visible throughout the process',
         image: '/case-assets/NgcL4kxd-web-mockup-V1-frontv2123.jpg',
         imagesGrid: [
           '/case-assets/v8JPPttN-1.jpg',
@@ -65,17 +73,15 @@ const PROJECT_DATA: Record<string, any> = {
         centerBox: true,
         content: (
           <span>
-            The final solution is a modular campaign builder that separates the creation flow into independent, reconfigurable sections, allowing store owners to build campaigns at their own pace without losing progress or context.
+            The result is a modular campaign builder that splits creation into independent, reconfigurable sections, so store owners can build campaigns at their own pace without losing progress or context.
             {'\n\n'}
-            As a designer who joined after the research phase, I didn't have direct access to post-launch performance data. However, the success criteria aligned with the product team from the start were clear, and if I were to define how I'd measure this solution's impact, I would track three things:
+            I didn't have access to post-launch data. These are the metrics I aligned with the product's success criteria and would use to measure impact:
             {'\n\n'}
-            • <span className="text-hextech-green font-bold">Task Completion Rate</span>: Monitoring the percentage of users who complete the campaign creation flow to see if we successfully decreased drop-off before publishing.
+            • <span className="text-hextech-green font-bold">Task completion rate:</span> share of users who finish and publish a campaign.
             {'\n\n'}
-            • <span className="text-hextech-green font-bold">Time to Publish</span>: Tracking the average time from campaign creation to first publish to ensure we reduced the time users spent configuring a campaign.
+            • <span className="text-hextech-green font-bold">Time to publish:</span> average time from starting a campaign to publishing it.
             {'\n\n'}
-            • <span className="text-hextech-green font-bold">Support Ticket Volume</span>: Measuring the reduction in support contacts related to campaign management to confirm the interface is more intuitive and less frustrating.
-            {'\n\n'}
-            These were the exact problems the brief pointed to, and they are the right indicators to know whether the design actually solved them.
+            • <span className="text-hextech-green font-bold">Support ticket volume:</span> contacts related to campaign management.
           </span>
         ),
         image: '/case-assets/KjGYFMPD-outcome.png'
@@ -84,23 +90,30 @@ const PROJECT_DATA: Record<string, any> = {
         title: 'Learnings',
         subtitle: 'TAKEAWAYS',
         centerBox: true,
-        content: "Working from a PM brief, without direct access to user research, pushed me to ask better questions before opening Figma. I learned to treat the briefing as a starting point, not a spec: map the assumptions, identify the gaps, and align on what we actually knew versus what we were betting on.\n\nIf I were to revisit this project, I would have pushed for at least one round of usability testing on the campaign creation flow before locking the modular structure. The concept made sense in theory, but I never got the chance to watch a real store owner navigate it from scratch, which is always where the most important insights show up.\n\nThe biggest takeaway: define success criteria at the start of the process, not the end. Designing without a clear metric is designing without a target. And without a target, it's hard to know when the work is actually done."
+        content: "Working from a PM brief without direct access to research pushed me to ask better questions before opening Figma. I treated the brief as a starting point, not a spec: mapping assumptions, finding gaps and aligning on what we knew versus what we were betting on.\n\nIf I did it again, I'd push for at least one round of usability testing before locking the modular structure. The concept made sense on paper, but watching a real store owner build a campaign from scratch is where the most important insights show up.\n\nThe biggest takeaway: define success criteria at the start, not the end. Without a target, it's hard to know when the work is actually done."
       }
     ]
   },
   'Blaze Product Page Redesign': {
     title: 'Blaze Product Page Redesign',
     subtitle: 'Apex Pages',
-    description: 'The product page created confusion, making it difficult for users to quickly understand the offerings. A new structure made it easy to find products.',
-    role: 'UX/UI Designer',
-    industry: 'E-commerce',
+    description: 'A product page rebuilt from a catalog into a decision-making tool, so shoppers can understand a product and buy the right amount without prior knowledge.',
+    role: 'Product Designer (UI/UX)',
+    industry: 'E-commerce (cannabis retail)',
     duration: '1 month',
+    details: [
+      { label: 'Role', value: 'Product Designer (UI/UX)' },
+      { label: 'Timeline', value: '1 month' },
+      { label: 'Industry', value: 'E-commerce (cannabis retail)' },
+      { label: 'Success metric', value: 'Conversion on product pages' },
+      { label: 'Methods', value: 'Heuristic analysis, competitive benchmarking, wireframes, iterative prototypes', wide: true },
+    ],
     image: '/case-assets/gcgYb11L-mainpage.jpg',
     stages: [
       {
         title: 'Where the Experience Breaks',
         subtitle: 'USER FRICTION',
-        content: 'The existing product page for our cannabis e-commerce platform lacked the clarity needed for an informed purchase. Users were overwhelmed by technical jargon, struggled to identify products suited to their experience level, and faced friction when attempting to purchase in bulk.\n\nThe redesign aims to better communicate this value by simplifying how information is presented and guiding users more effectively through the product experience.'
+        content: "The product page worked more like a catalog than a decision-making tool. Shoppers were overwhelmed by technical terms, couldn't tell which products fit their experience level, and had no easy way to choose different weights or buy in bulk."
       },
       {
         title: 'Research and Insights',
@@ -168,16 +181,16 @@ const PROJECT_DATA: Record<string, any> = {
         }
       },
       {
-        title: 'Design Solutions',
-        subtitle: 'SYSTEM ARCHITECTURE',
+        title: 'Key Decisions',
+        subtitle: 'DESIGN RATIONALE',
         solutions: [
           {
             image: '/case-assets/SShnVFWq-designsolutions.png',
             points: [
-              { label: 'Contextual Guidance:', text: 'Integrated Effect Profile icons (Calming, Balanced, Heady) allow users to instantly align the product with their desired experience.' },
-              { label: 'Dynamic Flexibility:', text: 'A new Available Weights selector streamlines the purchase flow, enabling easy selection from 1/8 oz to 1 oz without friction.' },
-              { label: 'Sensory Transparency:', text: 'Added Top Flavours and a detailed Terpene Breakdown to humanize the product and build consumer trust.' },
-              { label: 'Hierarchical Clarity:', text: 'Optimized whitespace and typography create a clean, scannable layout, allowing users to find technical data (THC/CBD) or product descriptions at a glance.' }
+              { label: 'Effect profile before technical data.', text: 'Most shoppers decide by how a product will make them feel, not by THC percentage. Effect icons (Calming, Balanced, Heady) come first; the technical data stays one glance away for experienced buyers.' },
+              { label: 'Weight selector inside the purchase area.', text: 'Choosing between 1/8 oz and 1 oz was a separate, rigid step. Putting the selector next to the price removes a decision point right at the moment of purchase.' },
+              { label: 'Flavors and terpenes in plain language.', text: "Shoppers couldn't picture the product. Top flavors and a terpene breakdown give sensory context without requiring prior knowledge." },
+              { label: 'One layout for two audiences.', text: 'Hierarchy and spacing let a first-time shopper read the essentials while an expert scans THC/CBD values directly.' }
             ]
           },
           {
@@ -185,6 +198,12 @@ const PROJECT_DATA: Record<string, any> = {
             fullWidth: true
           }
         ]
+      },
+      {
+        title: 'Outcome',
+        subtitle: 'RESULTS & MEASUREMENT',
+        centerBox: true,
+        content: "The redesign shipped with conversion as the primary success metric. Remote usability testing was conducted online through Google Meet after launch, but I had left the company before the results were available.\n\nTo measure its impact, I'd track add-to-cart rate from the product page, the share of orders using larger weights, and time on page before add-to-cart."
       }
     ]
   },
@@ -311,23 +330,23 @@ export default function ProjectDetail() {
 
       {/* Info Grid */}
       <section className="mb-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
+        <div className={`grid grid-cols-1 ${project.details ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-6`}>
+          {(project.details ?? [
             { label: 'Role', value: project.role },
             { label: 'Industry', value: project.industry },
             { label: 'Duration', value: project.duration },
-          ].map((item, i) => (
+          ]).map((item: { label: string; value: string; wide?: boolean }, i: number) => (
             <motion.div 
               key={i}
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 + i * 0.1 }}
-              className="glass-surface p-8"
+              className={`glass-surface p-8 ${item.wide ? 'md:col-span-2' : ''}`}
             >
               <div className="text-[10px] uppercase tracking-[4px] text-hextech-green mb-4">
                 {item.label}
               </div>
-              <div className="text-xl md:text-2xl font-display">
+              <div className={`${project.details ? 'text-base md:text-lg leading-relaxed' : 'text-xl md:text-2xl'} font-display`}>
                 {item.value}
               </div>
             </motion.div>

@@ -12,7 +12,7 @@ export default function Hero() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-[50px] font-display leading-[55px] tracking-tight mb-12 max-w-3xl mt-8 md:mt-0"
           >
-            I'm <span className="text-hextech-green">Gabriel Fiore</span>, a Product Designer crafting <span className="text-hextech-green">intuitive and impactful digital experiences.</span>
+            Product Designer for <span className="text-hextech-green">fintech and B2B SaaS.</span>
           </motion.h1>
           
           <motion.p 
@@ -21,20 +21,43 @@ export default function Hero() {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-xl text-aether-white mb-12 font-sans font-light leading-relaxed max-w-3xl"
           >
-            Designing products that are simple to use, meaningful to people, and effective for business.
+            I build design systems and turn business rules into specs engineers can build without guessing. 5 years working remotely with teams in Canada and Europe.
+          </motion.p>
+
+          <motion.p
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.25 }}
+            className="mb-8 text-sm font-medium text-aether-white/70"
+          >
+            Based in Brazil (UTC-3) · Open to remote roles, contractor or full-time
           </motion.p>
 
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
+            className="flex flex-col sm:flex-row flex-wrap gap-4"
           >
-            <Link 
-              to="/about"
+            <a
+              href="#projects"
               className="inline-flex items-center justify-center px-8 py-3 bg-hextech-green text-forge-void font-bold rounded-full font-display uppercase tracking-[4px] text-xs hover:ring-2 hover:ring-hextech-green hover:ring-offset-2 hover:ring-offset-forge-void transition-all duration-300"
             >
-              About Me
-            </Link>
+              View projects
+            </a>
+            <a
+              href="/Gabriel_Fiore_Product_Designer_CV.pdf"
+              download
+              className="inline-flex items-center justify-center px-8 py-3 border border-hextech-green text-hextech-green font-bold rounded-full font-display uppercase tracking-[4px] text-xs hover:bg-hextech-green hover:text-forge-void transition-all duration-300"
+            >
+              Download CV
+            </a>
+            <a
+              href="mailto:gfioreoliveira@gmail.com"
+              className="inline-flex items-center justify-center px-8 py-3 border border-aether-white/30 text-aether-white font-bold rounded-full font-display uppercase tracking-[4px] text-xs hover:border-hextech-green hover:text-hextech-green transition-all duration-300"
+            >
+              Get in touch
+            </a>
           </motion.div>
         </div>
 
