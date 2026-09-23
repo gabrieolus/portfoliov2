@@ -10,6 +10,7 @@ import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import ProjectDetail from './components/ProjectDetail';
+import Storybook from './components/Storybook';
 import Seo from './components/Seo';
 import { useEffect } from 'react';
 
@@ -41,6 +42,7 @@ export default function App() {
             } />
             <Route path="/about" element={<AboutMe />} />
             <Route path="/cases/:slug" element={<ProjectDetail />} />
+            <Route path="/storybook" element={<Storybook />} />
           </Routes>
         </main>
         <Footer />

@@ -35,6 +35,7 @@ export default function Seo() {
     setMeta('meta[name="twitter:title"]', 'name', 'twitter:title', seo.title);
     setMeta('meta[name="twitter:description"]', 'name', 'twitter:description', seo.description);
     setMeta('meta[name="twitter:image"]', 'name', 'twitter:image', DEFAULT_OG_IMAGE);
+    setMeta('meta[name="robots"]', 'name', 'robots', seo.noindex ? 'noindex, nofollow' : 'index, follow');
 
     let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!canonical) {

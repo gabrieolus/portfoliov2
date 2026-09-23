@@ -66,6 +66,7 @@ function createHead(seo) {
   return `<!-- SEO:START -->
     <title>${title}</title>
     <meta name="description" content="${description}" />
+    <meta name="robots" content="${seo.noindex ? 'noindex, nofollow' : 'index, follow'}" />
     <link rel="canonical" href="${canonical}" />
 
     <meta property="og:title" content="${title}" />

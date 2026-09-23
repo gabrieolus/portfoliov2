@@ -6,6 +6,7 @@ export type SeoMetadata = {
   title: string;
   description: string;
   type?: 'website' | 'profile' | 'article';
+  noindex?: boolean;
 };
 
 export const SEO_ROUTES: SeoMetadata[] = [
@@ -57,6 +58,14 @@ export const SEO_ROUTES: SeoMetadata[] = [
     description:
       'Web design case study covering UX/UI, illustration and motion work created for the Kore private-capital ecosystem.',
     type: 'article',
+  },
+  {
+    path: '/storybook',
+    title: 'Portfolio Storybook | Gabriel Fiore',
+    description:
+      'Internal visual reference for the components, foundations and interaction patterns used across Gabriel Fiore\'s portfolio.',
+    type: 'website',
+    noindex: true,
   },
 ];
 
