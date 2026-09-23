@@ -12,23 +12,23 @@ export type SeoMetadata = {
 export const SEO_ROUTES: SeoMetadata[] = [
   {
     path: '/',
-    title: 'Gabriel Fiore | Product Designer & Design Systems',
+    title: 'Gabriel Fiore | Product Designer: Design Systems, Fintech & B2B SaaS',
     description:
-      'Portfolio of Gabriel Fiore, a Product Designer based in Sorocaba, Brazil, focused on UX/UI, design systems, developer handoff and AI workflows.',
+      'Product Designer with 5 years in fintech, B2B SaaS and e-commerce. Design systems, regulated flows and developer handoff. Based in Brazil, working remotely.',
     type: 'profile',
   },
   {
     path: '/about',
     title: 'About Gabriel Fiore | Product Designer',
     description:
-      'Learn about Gabriel Fiore\'s experience designing SaaS products, design systems and UX/UI solutions for fintech and e-commerce teams.',
+      'About Gabriel Fiore, Product Designer: 5 years designing SaaS products, design systems and regulated flows for fintech and e-commerce teams in Canada and Europe.',
     type: 'profile',
   },
   {
     path: '/cases/blaze-campaign-builder',
     title: 'Blaze Campaign Builder | Gabriel Fiore',
     description:
-      'Product design case study for a modular campaign builder that helps e-commerce store owners create, manage and monitor marketing campaigns.',
+      'Zero-to-one product design case study for an internal campaign management platform, covering information architecture, component architecture, user flows and interaction specifications.',
     type: 'article',
   },
   {

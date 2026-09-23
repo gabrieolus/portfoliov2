@@ -5,7 +5,7 @@ const projects = [
   {
     title: 'Campaign Builder for Blaze Ecom',
     slug: 'blaze-campaign-builder',
-    description: 'This project focuses on the campaign management section of a cannabis e-commerce dashboard. It helps store owners create and track marketing campaigns in one place.',
+    description: 'A zero-to-one campaign management platform designed as the sole product designer, covering information architecture, component architecture, user flows, and interaction specifications.',
     image: '/case-assets/KvSm89KT-cover-campaign-builder.png',
     category: 'Product Design'
   },
@@ -73,13 +73,13 @@ export default function Projects() {
             className="group block"
           >
             <Link to={`/cases/${project.slug}`} className="block block-inherit h-full">
-              <div className="rounded-[4px] overflow-hidden mb-8 hextech-border">
+              <div className="relative aspect-[3/2] rounded-[4px] overflow-hidden mb-8 hextech-border">
                 <img 
                   src={project.image} 
                   alt={project.title}
                   loading="lazy"
                   decoding="async"
-                  className="block w-full h-auto transition-opacity duration-300 group-hover:opacity-90"
+                  className="absolute inset-0 block w-full h-full object-cover object-center transition-opacity duration-300 group-hover:opacity-90"
                 />
               </div>
               <div className="space-y-6 md:max-w-[90%]">
