@@ -39,3 +39,21 @@
 .btn-micro {
   @apply font-sans font-bold uppercase tracking-wider text-[10px] py-3 px-6 transition-all duration-300 rounded-[4px];
 }
+
+.case-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .case-info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .case-info-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
