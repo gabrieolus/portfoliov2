@@ -291,6 +291,12 @@ export default function ProjectDetail() {
 
   if (!project) return <div className="pt-40 text-center text-aether-white">Project not found</div>;
 
+  const detailItems = project.details ?? [
+    { label: 'Role', value: project.role },
+    { label: 'Industry', value: project.industry },
+    { label: 'Duration', value: project.duration },
+  ];
+
   return (
     <div className="min-h-screen bg-forge-void text-aether-white pt-32">
       {/* Back Button */}
@@ -330,18 +336,14 @@ export default function ProjectDetail() {
 
       {/* Info Grid */}
       <section className="mb-20">
-        <div className={`grid grid-cols-1 ${project.details ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-6`}>
-          {(project.details ?? [
-            { label: 'Role', value: project.role },
-            { label: 'Industry', value: project.industry },
-            { label: 'Duration', value: project.duration },
-          ]).map((item: { label: string; value: string; wide?: boolean }, i: number) => (
+        <div className="case-info-grid">
+          {detailItems.map((item: { label: string; value: string }, i: number) => (
             <motion.div 
               key={i}
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 + i * 0.1 }}
-              className={`glass-surface p-8 ${item.wide ? 'md:col-span-2' : ''}`}
+              className="glass-surface p-6 lg:p-7 min-w-0"
             >
               <div className="text-[10px] uppercase tracking-[4px] text-hextech-green mb-4">
                 {item.label}
